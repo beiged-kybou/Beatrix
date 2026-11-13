@@ -44,6 +44,7 @@
     "home_hint": "↑ ↓ পাঠ বাছাই · PgDn PgUp অংশ · এন্টার খোলো · Alt+B ভাষা · Alt+H সাহায্য",
     "lesson_hint": "ট্যাব: লেখা ↔ ম্যাট্রিক্স ↔ উত্তর · R প্রশ্ন · Alt+N বাদ · Alt+M পাঠ · Alt+H সাহায্য",
     "reading_by": "পড়ার ধরন",
+    "text_navigation_hint": "স্পেস: পুরোটা শোনো / থামাও · → / ← বাক্য ধরে চলো",
     "audio_word_mode": "অডিও শব্দ মোড",
     "answer_number": "তোমার উত্তর",
     "answer_rows": "সারির সংখ্যা",

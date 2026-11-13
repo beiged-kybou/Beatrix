@@ -10,7 +10,7 @@
  */
 
 import { createServer } from 'node:http';
-import { readFile, stat } from 'node:fs/promises';
+import { readFile, stat, open } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, normalize, extname } from 'node:path';
 
@@ -38,8 +38,45 @@ createServer(async (req, res) => {
     return;
   }
   try {
-    if (!(await stat(file)).isFile()) throw new Error('not a file');
-    res.writeHead(200, { 'Content-Type': TYPES[extname(file)] ?? 'application/octet-stream', 'Cache-Control': 'no-cache' });
+    const fileStat = await stat(file);
+    if (!fileStat.isFile()) throw new Error('not a file');
+    const contentType = TYPES[extname(file)] ?? 'application/octet-stream';
+    const totalSize = fileStat.size;
+
+    const rangeHeader = req.headers.range;
+    if (rangeHeader && rangeHeader.startsWith('bytes=')) {
+      const parts = rangeHeader.replace(/bytes=/, '').split('-');
+      const start = parseInt(parts[0], 10);
+      const end = parts[1] ? parseInt(parts[1], 10) : totalSize - 1;
+
+      if (start >= totalSize || end >= totalSize || start > end) {
+        res.writeHead(416, { 'Content-Range': `bytes */${totalSize}` }).end();
+        return;
+      }
+
+      const chunkSize = end - start + 1;
+      const fileHandle = await open(file, 'r');
+      const buffer = Buffer.alloc(chunkSize);
+      await fileHandle.read(buffer, 0, chunkSize, start);
+      await fileHandle.close();
+
+      res.writeHead(206, {
+        'Content-Range': `bytes ${start}-${end}/${totalSize}`,
+        'Accept-Ranges': 'bytes',
+        'Content-Length': chunkSize,
+        'Content-Type': contentType,
+        'Cache-Control': 'no-cache',
+      });
+      res.end(buffer);
+      return;
+    }
+
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Content-Length': totalSize,
+      'Accept-Ranges': 'bytes',
+      'Cache-Control': 'no-cache',
+    });
     res.end(await readFile(file));
   } catch {
     res.writeHead(404).end('Not found');

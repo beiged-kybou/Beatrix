@@ -37,6 +37,7 @@ export const KEYBINDINGS = [
   // --- Text pane ---
   { command: 'NEXT_UNIT',     keys: ['ArrowRight'],      contexts: ['text'] },
   { command: 'PREV_UNIT',     keys: ['ArrowLeft'],       contexts: ['text'] },
+  { command: 'TOGGLE_PLAY',   keys: ['Space'],           contexts: ['text'] },
   { command: 'NEXT_SENTENCE', keys: ['Ctrl+ArrowRight'], contexts: ['text'] },
   { command: 'PREV_SENTENCE', keys: ['Ctrl+ArrowLeft'],  contexts: ['text'] },
 

@@ -44,6 +44,7 @@
     "home_hint": "↑ ↓ choose a lesson · PgDn PgUp sections · Enter open · Alt+B language · Alt+H help",
     "lesson_hint": "Tab: text ↔ matrix ↔ answer · R question · Alt+N skip · Alt+M lessons · Alt+H help",
     "reading_by": "Reading by",
+    "text_navigation_hint": "Space: Play / Pause all · → / ← Read sentence by sentence",
     "audio_word_mode": "Audio word mode",
     "answer_number": "Your answer",
     "answer_rows": "Number of rows",

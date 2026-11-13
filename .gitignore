@@ -1,8 +1,12 @@
-# Claude Code session settings (local only)
+# Secrets
+*key*
+*.key
+.env*
 .claude/
 
 # Dependencies
 node_modules/
+.venv/
 
 # OS and editor files
 .DS_Store

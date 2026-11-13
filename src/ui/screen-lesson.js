@@ -200,9 +200,7 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
   }
 
   function renderModeLine() {
-    const unit = t(`spoken.unit_${getState('textUnit')}`);
-    const audio = getState('transcriptMode') ? ` · ${t('screen.audio_word_mode')}` : '';
-    modeLine.textContent = `${t('screen.reading_by')}: ${unit}${audio}`;
+    modeLine.textContent = t('screen.text_navigation_hint');
   }
 
   /** Where the keyboard focus goes when a step opens. */
@@ -344,6 +342,7 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
       case 'PREV_UNIT':
       case 'NEXT_SENTENCE':
       case 'PREV_SENTENCE':
+      case 'TOGGLE_PLAY':
         textPane.handle(name);
         break;
       case 'WHERE_AM_I':
@@ -389,6 +388,7 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
         break;
       case 'STOP':
         speech.stop();
+        textPane.handle('STOP');
         break;
       default:
         break;
