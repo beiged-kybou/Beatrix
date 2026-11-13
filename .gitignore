@@ -10,3 +10,6 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# Planning logs (kept local only)
+internal_logs/
