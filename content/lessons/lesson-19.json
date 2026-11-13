@@ -1,0 +1,605 @@
+{
+  "id": "l19",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 19: Shapes in the grid",
+    "bn": "পাঠ ১৯: ছকের মধ্যে আকৃতি"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "Some cells hold a star. Together, the stars make a shape. Walk around, press Space to find the stars, and picture where they are.",
+          "bn": "কিছু ঘরে তারা আছে। সব তারা মিলে একটি আকৃতি তৈরি করে। ঘুরে ঘুরে স্পেস চেপে তারাগুলো খুঁজে বের করো, আর মনে মনে ভাবো সেগুলো কোথায় আছে।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "A straight line is stars all in one row, or all in one column. A diagonal line is stars on a slant, like the main diagonal.",
+          "bn": "সোজা রেখা মানে সব তারা একই সারিতে, বা একই কলামে। কোনাকুনি রেখা মানে তারাগুলো তির্যকভাবে আছে, প্রধান কর্ণের মতো।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "A square is a block of 2 rows and 2 columns. An L shape is a line that turns at a corner. Diagonal steps are allowed here. Press Alt N to begin.",
+          "bn": "বর্গ মানে ২ সারি আর ২ কলামের একটি টুকরো। L আকৃতি মানে এমন একটি রেখা যা এক কোণায় বাঁক নেয়। এখানে কোনাকুনি পা চালু আছে। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "choice",
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 0,
+      "prompt": {
+        "en": "Some cells of this 4 by 4 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "choice",
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 3,
+      "prompt": {
+        "en": "Some cells of this 4 by 4 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "choice",
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 2,
+      "prompt": {
+        "en": "Some cells of this 4 by 4 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "choice",
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 1,
+      "prompt": {
+        "en": "Some cells of this 4 by 4 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "choice",
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 0,
+      "prompt": {
+        "en": "Some cells of this 5 by 5 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "choice",
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 2,
+      "prompt": {
+        "en": "Some cells of this 5 by 5 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    },
+    {
+      "id": "ex07",
+      "type": "choice",
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 5,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 3,
+      "prompt": {
+        "en": "Some cells of this 5 by 5 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    },
+    {
+      "id": "ex08",
+      "type": "choice",
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "a straight line",
+          "bn": "একটি সোজা রেখা"
+        },
+        {
+          "en": "an L shape",
+          "bn": "একটি L আকৃতি"
+        },
+        {
+          "en": "a square",
+          "bn": "একটি বর্গ"
+        },
+        {
+          "en": "a diagonal line",
+          "bn": "একটি কোনাকুনি রেখা"
+        }
+      ],
+      "answer": 1,
+      "prompt": {
+        "en": "Some cells of this 5 by 5 matrix hold a star. Find them all. What shape do the stars make?",
+        "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের কিছু ঘরে তারা আছে। সবগুলো খুঁজে বের করো। তারাগুলো কোন আকৃতি তৈরি করেছে?"
+      }
+    }
+  ]
+}

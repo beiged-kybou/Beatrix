@@ -1,0 +1,112 @@
+{
+  "id": "l09",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 9: What is in this cell?", "bn": "পাঠ ৯: এই ঘরে কী আছে?" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "A matrix can keep things in its cells, like a shelf with boxes. Now some cells hold fruits, animals or other things.",
+        "bn": "ম্যাট্রিক্সের ঘরে জিনিস রাখা যায়, ঠিক তাকের বাক্সের মতো। এখন কিছু ঘরে ফল, প্রাণী বা অন্য জিনিস আছে।" } },
+      { "id": "p02", "text": {
+        "en": "Walk to a cell and press Space to hear what is in it. If nothing is there, you hear: empty.",
+        "bn": "কোনো ঘরে গিয়ে স্পেস চাপলে শুনবে ঘরে কী আছে। কিছু না থাকলে শুনবে: খালি।" } },
+      { "id": "p03", "text": {
+        "en": "Later, the cells will hold numbers. That is how we will do maths with matrices.",
+        "bn": "পরে ঘরগুলোতে সংখ্যা থাকবে। এভাবেই আমরা ম্যাট্রিক্স দিয়ে গণিত করব।" } },
+      { "id": "p04", "text": {
+        "en": "Some questions ask you to choose an answer, some to type a number, and some to find a thing and press Enter on it. Press Alt N to begin.",
+        "bn": "কিছু প্রশ্নে উত্তর বেছে নিতে হবে, কিছুতে সংখ্যা লিখতে হবে, আর কিছুতে জিনিস খুঁজে তার ওপর এন্টার চাপতে হবে। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "choice", "explore": { "rows": 3, "cols": 3 }, "speakingCells": "default", "answer": 0,
+      "contents": [
+        { "row": 2, "col": 3, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 1, "col": 1, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 3, "col": 2, "item": { "en": "cat", "bn": "বিড়াল" } } ],
+      "options": [ { "en": "mango", "bn": "আম" }, { "en": "cat", "bn": "বিড়াল" }, { "en": "apple", "bn": "আপেল" } ],
+      "prompt": { "en": "What is at (2, 3)? Walk there and press Space to hear it. Then press Enter to choose your answer.",
+                  "bn": "(২, ৩)-এ কী আছে? সেখানে গিয়ে স্পেস চেপে শোনো। তারপর এন্টার চেপে উত্তর বেছে নাও।" } },
+    { "id": "ex02", "type": "find-cell", "rows": 3, "cols": 3, "item": { "en": "cat", "bn": "বিড়াল" }, "target": { "row": 3, "col": 1 }, "speakingCells": "default",
+      "contents": [
+        { "row": 3, "col": 1, "item": { "en": "cat", "bn": "বিড়াল" } },
+        { "row": 2, "col": 2, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 1, "col": 3, "item": { "en": "ball", "bn": "বল" } } ],
+      "prompt": { "en": "Find the cat. Walk around and press Space to hear what is in each cell. Press Enter when you are on the cat.",
+                  "bn": "বিড়ালটি খুঁজে বের করো। ঘুরে ঘুরে প্রতিটি ঘরে স্পেস চেপে শোনো কী আছে। বিড়ালের ঘরে পৌঁছে এন্টার চাপো।" } },
+    { "id": "ex03", "type": "choice", "explore": { "rows": 4, "cols": 4 }, "speakingCells": "default", "answer": 1,
+      "contents": [
+        { "row": 4, "col": 2, "item": { "en": "fish", "bn": "মাছ" } },
+        { "row": 1, "col": 4, "item": { "en": "book", "bn": "বই" } },
+        { "row": 3, "col": 3, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 2, "col": 1, "item": { "en": "ball", "bn": "বল" } } ],
+      "options": [ { "en": "book", "bn": "বই" }, { "en": "fish", "bn": "মাছ" }, { "en": "ball", "bn": "বল" } ],
+      "prompt": { "en": "What is at (4, 2)? Walk there and press Space to hear it. Then press Enter to choose your answer.",
+                  "bn": "(৪, ২)-এ কী আছে? সেখানে গিয়ে স্পেস চেপে শোনো। তারপর এন্টার চেপে উত্তর বেছে নাও।" } },
+    { "id": "ex04", "type": "find-cell", "rows": 4, "cols": 4, "item": { "en": "book", "bn": "বই" }, "target": { "row": 2, "col": 3 }, "speakingCells": "default",
+      "contents": [
+        { "row": 2, "col": 3, "item": { "en": "book", "bn": "বই" } },
+        { "row": 4, "col": 1, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 1, "col": 2, "item": { "en": "star", "bn": "তারা" } },
+        { "row": 3, "col": 4, "item": { "en": "cat", "bn": "বিড়াল" } } ],
+      "prompt": { "en": "Find the book. Walk around and press Space to hear what is in each cell. Press Enter when you are on the book.",
+                  "bn": "বইটি খুঁজে বের করো। ঘুরে ঘুরে প্রতিটি ঘরে স্পেস চেপে শোনো কী আছে। বইয়ের ঘরে পৌঁছে এন্টার চাপো।" } },
+    { "id": "ex05", "type": "number-answer", "answer": 3, "explore": { "rows": 4, "cols": 4 }, "speakingCells": "default",
+      "contents": [
+        { "row": 2, "col": 1, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 2, "col": 2, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 2, "col": 3, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 2, "col": 4, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 3, "col": 2, "item": { "en": "apple", "bn": "আপেল" } } ],
+      "prompt": { "en": "How many apples are in row 2? Walk along row 2 and press Space in each cell. Then type the number and press Enter.",
+                  "bn": "সারি ২-এ কয়টি আপেল আছে? সারি ২ ধরে হাঁটো আর প্রতিটি ঘরে স্পেস চাপো। তারপর সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex06", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "fish", "bn": "মাছ" }, "target": { "row": 4, "col": 5 }, "speakingCells": "default",
+      "contents": [
+        { "row": 4, "col": 5, "item": { "en": "fish", "bn": "মাছ" } },
+        { "row": 2, "col": 2, "item": { "en": "ball", "bn": "বল" } },
+        { "row": 5, "col": 1, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 1, "col": 4, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 3, "col": 3, "item": { "en": "cat", "bn": "বিড়াল" } } ],
+      "prompt": { "en": "Find the fish. Walk around and press Space to hear what is in each cell. Press Enter when you are on the fish.",
+                  "bn": "মাছটি খুঁজে বের করো। ঘুরে ঘুরে প্রতিটি ঘরে স্পেস চেপে শোনো কী আছে। মাছের ঘরে পৌঁছে এন্টার চাপো।" } },
+    { "id": "ex07", "type": "number-answer", "answer": 2, "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default",
+      "contents": [
+        { "row": 1, "col": 3, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 4, "col": 3, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 2, "col": 1, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 3, "col": 3, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 5, "col": 3, "item": { "en": "ball", "bn": "বল" } } ],
+      "prompt": { "en": "How many mangoes are in column 3? Walk along column 3 and press Space in each cell. Then type the number and press Enter.",
+                  "bn": "কলাম ৩-এ কয়টি আম আছে? কলাম ৩ ধরে হাঁটো আর প্রতিটি ঘরে স্পেস চাপো। তারপর সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex08", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 2,
+      "contents": [
+        { "row": 5, "col": 5, "item": { "en": "star", "bn": "তারা" } },
+        { "row": 1, "col": 1, "item": { "en": "ball", "bn": "বল" } },
+        { "row": 3, "col": 4, "item": { "en": "cat", "bn": "বিড়াল" } },
+        { "row": 5, "col": 1, "item": { "en": "fish", "bn": "মাছ" } } ],
+      "options": [ { "en": "fish", "bn": "মাছ" }, { "en": "cat", "bn": "বিড়াল" }, { "en": "star", "bn": "তারা" } ],
+      "prompt": { "en": "What is at (5, 5)? Walk there and press Space to hear it. Then press Enter to choose your answer.",
+                  "bn": "(৫, ৫)-এ কী আছে? সেখানে গিয়ে স্পেস চেপে শোনো। তারপর এন্টার চেপে উত্তর বেছে নাও।" } },
+    { "id": "ex09", "type": "number-answer", "answer": 4, "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default",
+      "contents": [
+        { "row": 4, "col": 1, "item": { "en": "cat", "bn": "বিড়াল" } },
+        { "row": 4, "col": 3, "item": { "en": "book", "bn": "বই" } },
+        { "row": 4, "col": 4, "item": { "en": "ball", "bn": "বল" } },
+        { "row": 4, "col": 5, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 2, "col": 2, "item": { "en": "fish", "bn": "মাছ" } },
+        { "row": 5, "col": 3, "item": { "en": "mango", "bn": "আম" } } ],
+      "prompt": { "en": "How many things are in row 4? Count every cell that is not empty. Then type the number and press Enter.",
+                  "bn": "সারি ৪-এ কয়টি জিনিস আছে? যে ঘরগুলো খালি নয়, সেগুলো গোনো। তারপর সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex10", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 1,
+      "contents": [
+        { "row": 3, "col": 2, "item": { "en": "mango", "bn": "আম" } },
+        { "row": 3, "col": 5, "item": { "en": "book", "bn": "বই" } },
+        { "row": 1, "col": 2, "item": { "en": "apple", "bn": "আপেল" } },
+        { "row": 5, "col": 2, "item": { "en": "fish", "bn": "মাছ" } } ],
+      "options": [ { "en": "apple", "bn": "আপেল" }, { "en": "book", "bn": "বই" }, { "en": "fish", "bn": "মাছ" } ],
+      "prompt": { "en": "Which thing is in the same row as the mango? First find the mango, then walk along its row. Press Enter to choose your answer.",
+                  "bn": "কোন জিনিসটি আমের একই সারিতে আছে? আগে আমটি খুঁজে বের করো, তারপর তার সারি ধরে হাঁটো। এন্টার চেপে উত্তর বেছে নাও।" } }
+  ]
+}

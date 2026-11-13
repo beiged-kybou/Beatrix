@@ -1,0 +1,49 @@
+{
+  "id": "l01",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 1: What is a matrix?", "bn": "পাঠ ১: ম্যাট্রিক্স কী?" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "A matrix is a set of boxes arranged in straight lines, like the benches in a classroom.",
+        "bn": "ম্যাট্রিক্স হলো সোজা লাইনে সাজানো কিছু বাক্স, ঠিক যেমন ক্লাসরুমে বেঞ্চগুলো সারি সারি সাজানো থাকে।" } },
+      { "id": "p02", "text": {
+        "en": "Each box is called a cell.",
+        "bn": "প্রতিটি বাক্সকে বলা হয় ঘর।" } },
+      { "id": "p03", "text": {
+        "en": "A row goes from left to right. A column goes straight forward, away from you.",
+        "bn": "সারি চলে বাম থেকে ডানে। কলাম চলে তোমার কাছ থেকে সোজা সামনের দিকে।" } },
+      { "id": "p04", "text": {
+        "en": "Row 1 is the row nearest to you. When you move forward, the row number grows: row 1, row 2, row 3. Column 1 is on your left. When you move right, the column number grows.",
+        "bn": "সারি ১ তোমার সবচেয়ে কাছের সারি। সামনে গেলে সারির নম্বর বাড়ে: সারি ১, সারি ২, সারি ৩। কলাম ১ তোমার বাম দিকে। ডানে গেলে কলামের নম্বর বাড়ে।" } },
+      { "id": "p05", "text": {
+        "en": "We write the size of a matrix as m × n. We read it as m by n. m is the number of rows, and n is the number of columns.",
+        "bn": "ম্যাট্রিক্সের আকার আমরা লিখি m × n, আর পড়ি m বাই n। এখানে m হলো সারির সংখ্যা, আর n হলো কলামের সংখ্যা।" } },
+      { "id": "p06", "text": {
+        "en": "A 3 × 4 matrix has 3 rows and 4 columns. So it has 3 times 4, that is 12 cells.",
+        "bn": "৩ × ৪ ম্যাট্রিক্সে ৩টি সারি আর ৪টি কলাম আছে। তাই এতে ঘর আছে ৩ গুণ ৪, অর্থাৎ ১২টি।" } },
+      { "id": "p07", "text": {
+        "en": "Now practise. Press Tab to go to the matrix. It is a 3 × 3 matrix, and every cell tells you its row and column. Move around with the arrow keys. When you are ready for the exercises, press Alt N.",
+        "bn": "এখন অনুশীলন করো। ট্যাব চেপে ম্যাট্রিক্সে যাও। এটি একটি ৩ × ৩ ম্যাট্রিক্স, প্রতিটি ঘর তোমাকে তার সারি আর কলাম বলবে। তীর চিহ্নের বোতাম দিয়ে ঘুরে দেখো। অনুশীলনীর জন্য তৈরি হলে অল্ট এন চাপো।" } }
+    ],
+    "explore": { "rows": 3, "cols": 3 }
+  },
+  "exercises": [
+    { "id": "ex01", "type": "number-answer", "answer": 5, "explore": null, "prompt": {
+      "en": "How many rows does a 5 × 5 matrix have? Type the number and press Enter.",
+      "bn": "৫ × ৫ ম্যাট্রিক্সে কয়টি সারি আছে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex02", "type": "number-answer", "answer": 9, "explore": null, "prompt": {
+      "en": "How many cells does a 3 × 3 matrix have? Type the number and press Enter.",
+      "bn": "৩ × ৩ ম্যাট্রিক্সে কয়টি ঘর আছে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex03", "type": "number-answer", "answer": 4, "explore": null, "prompt": {
+      "en": "How many columns does a 2 × 4 matrix have? Type the number and press Enter.",
+      "bn": "২ × ৪ ম্যাট্রিক্সে কয়টি কলাম আছে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex04", "type": "number-answer", "answer": 4, "explore": null, "prompt": {
+      "en": "How many rows does a 4 × 6 matrix have? Type the number and press Enter.",
+      "bn": "৪ × ৬ ম্যাট্রিক্সে কয়টি সারি আছে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex05", "type": "number-answer", "answer": 10, "explore": null, "prompt": {
+      "en": "How many cells does a 2 × 5 matrix have? Type the number and press Enter.",
+      "bn": "২ × ৫ ম্যাট্রিক্সে কয়টি ঘর আছে? সংখ্যাটি লিখে এন্টার চাপো।" } }
+  ]
+}

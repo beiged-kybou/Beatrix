@@ -1,0 +1,316 @@
+{
+  "id": "l13",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 13: Shortest way with diagonals",
+    "bn": "পাঠ ১৩: কোনাকুনি নিয়ে সবচেয়ে ছোট পথ"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "In Lesson 7 you could not move diagonally. From (1, 1) to (4, 3) took 3 plus 2, that is 5 steps.",
+          "bn": "পাঠ ৭-এ তুমি কোনাকুনি যেতে পারতে না। (১, ১) থেকে (৪, ৩) যেতে লাগত ৩ যোগ ২, অর্থাৎ ৫ পা।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "With diagonal steps it is shorter: 2 steps forward-right take you to (3, 3), then 1 step forward to (4, 3). Only 3 steps.",
+          "bn": "কোনাকুনি পা নিলে পথ ছোট হয়: সামনে-ডানে ২ পা গেলে (৩, ৩), তারপর সামনে ১ পা গেলে (৪, ৩)। মাত্র ৩ পা।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "The rule: count how much the row changes and how much the column changes. The answer is the bigger of the two.",
+          "bn": "নিয়ম: সারি কতটা বদলায় আর কলাম কতটা বদলায় গোনো। দুটোর মধ্যে যেটি বড়, সেটিই উত্তর।"
+        }
+      },
+      {
+        "id": "p04",
+        "text": {
+          "en": "You can check in the matrix: only the two cells in the question speak, and Space tells you what is in a cell. Press Alt N to begin.",
+          "bn": "চাইলে ম্যাট্রিক্সে মিলিয়ে দেখতে পারো: শুধু প্রশ্নের দুটি ঘর কথা বলবে, আর স্পেস চাপলে ঘরে কী আছে বলবে। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "number-answer",
+      "answer": 2,
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 3,
+          "col": 3
+        }
+      ],
+      "contents": [
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "ball",
+            "bn": "বল"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "You are at row 1, column 1. The ball is at row 3, column 3. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "তুমি আছ সারি ১, কলাম ১-এ। বলটি আছে সারি ৩, কলাম ৩-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "number-answer",
+      "answer": 3,
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 4,
+          "col": 2
+        }
+      ],
+      "contents": [
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "mango",
+            "bn": "আম"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "You are at row 1, column 1. The mango is at row 4, column 2. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "তুমি আছ সারি ১, কলাম ১-এ। আমটি আছে সারি ৪, কলাম ২-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "number-answer",
+      "answer": 3,
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 2,
+          "col": 5
+        },
+        {
+          "row": 5,
+          "col": 2
+        }
+      ],
+      "contents": [
+        {
+          "row": 5,
+          "col": 2,
+          "item": {
+            "en": "cat",
+            "bn": "বিড়াল"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "You are at row 2, column 5. The cat is at row 5, column 2. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "তুমি আছ সারি ২, কলাম ৫-এ। বিড়ালটি আছে সারি ৫, কলাম ২-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 5,
+          "col": 4
+        }
+      ],
+      "contents": [
+        {
+          "row": 5,
+          "col": 4,
+          "item": {
+            "en": "book",
+            "bn": "বই"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "You are at row 1, column 3. The book is at row 5, column 4. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "তুমি আছ সারি ১, কলাম ৩-এ। বইটি আছে সারি ৫, কলাম ৪-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 5,
+          "col": 5
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "contents": [
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "You are at row 5, column 5. The star is at row 1, column 2. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "তুমি আছ সারি ৫, কলাম ৫-এ। তারাটি আছে সারি ১, কলাম ২-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 3,
+          "col": 1
+        },
+        {
+          "row": 3,
+          "col": 5
+        }
+      ],
+      "contents": [
+        {
+          "row": 3,
+          "col": 5,
+          "item": {
+            "en": "fish",
+            "bn": "মাছ"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "You are at row 3, column 1. The fish is at row 3, column 5. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "তুমি আছ সারি ৩, কলাম ১-এ। মাছটি আছে সারি ৩, কলাম ৫-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex07",
+      "type": "number-answer",
+      "answer": 5,
+      "explore": {
+        "rows": 6,
+        "cols": 6
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 6,
+          "col": 6
+        }
+      ],
+      "contents": [
+        {
+          "row": 6,
+          "col": 6,
+          "item": {
+            "en": "apple",
+            "bn": "আপেল"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "This matrix is 6 by 6. You are at row 1, column 1. The apple is at row 6, column 6. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "এই ম্যাট্রিক্সটি ৬ বাই ৬। তুমি আছ সারি ১, কলাম ১-এ। আপেলটি আছে সারি ৬, কলাম ৬-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex08",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": {
+        "rows": 7,
+        "cols": 7
+      },
+      "diagonalMoves": true,
+      "speakingCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 3
+        }
+      ],
+      "contents": [
+        {
+          "row": 6,
+          "col": 3,
+          "item": {
+            "en": "ball",
+            "bn": "বল"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "This matrix is 7 by 7. You are at row 2, column 2. The ball is at row 6, column 3. With diagonal steps, how many steps is the shortest way? Type the number and press Enter.",
+        "bn": "এই ম্যাট্রিক্সটি ৭ বাই ৭। তুমি আছ সারি ২, কলাম ২-এ। বলটি আছে সারি ৬, কলাম ৩-এ। কোনাকুনি পা নিলে সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    }
+  ]
+}

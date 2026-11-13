@@ -1,0 +1,55 @@
+{
+  "id": "l08",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 8: Same row or same column?", "bn": "পাঠ ৮: একই সারি না একই কলাম?" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "Two cells are in the same row when their row numbers are the same, like (3, 2) and (3, 5).",
+        "bn": "দুটি ঘরের সারির নম্বর একই হলে তারা একই সারিতে থাকে, যেমন (৩, ২) আর (৩, ৫)।" } },
+      { "id": "p02", "text": {
+        "en": "Two cells are in the same column when their column numbers are the same, like (2, 4) and (5, 4).",
+        "bn": "দুটি ঘরের কলামের নম্বর একই হলে তারা একই কলামে থাকে, যেমন (২, ৪) আর (৫, ৪)।" } },
+      { "id": "p03", "text": {
+        "en": "Each question starts in a 5 by 5 matrix where every cell speaks, so you can check. When you know the answer, press Enter to go to the answers.",
+        "bn": "প্রতিটি প্রশ্ন শুরু হবে একটি ৫ বাই ৫ ম্যাট্রিক্সে, যেখানে প্রতিটি ঘর কথা বলে, তাই তুমি মিলিয়ে দেখতে পারো। উত্তর জানলে এন্টার চেপে উত্তরগুলোতে যাও।" } },
+      { "id": "p04", "text": {
+        "en": "Use the up and down arrows to hear the answers, then press Enter. Or press the number of the answer: 1 or 2. Press Alt N to begin.",
+        "bn": "উপরের আর নিচের তীর দিয়ে উত্তরগুলো শোনো, তারপর এন্টার চাপো। অথবা উত্তরের নম্বর চাপো: ১ বা ২। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 0,
+      "options": [ { "en": "Yes", "bn": "হ্যাঁ" }, { "en": "No", "bn": "না" } ],
+      "prompt": { "en": "Are (3, 2) and (3, 5) in the same row?", "bn": "(৩, ২) আর (৩, ৫) কি একই সারিতে আছে?" } },
+    { "id": "ex02", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 0,
+      "options": [ { "en": "Yes", "bn": "হ্যাঁ" }, { "en": "No", "bn": "না" } ],
+      "prompt": { "en": "Are (2, 4) and (5, 4) in the same column?", "bn": "(২, ৪) আর (৫, ৪) কি একই কলামে আছে?" } },
+    { "id": "ex03", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 1,
+      "options": [ { "en": "Yes", "bn": "হ্যাঁ" }, { "en": "No", "bn": "না" } ],
+      "prompt": { "en": "Are (1, 3) and (3, 1) in the same row?", "bn": "(১, ৩) আর (৩, ১) কি একই সারিতে আছে?" } },
+    { "id": "ex04", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 1,
+      "options": [ { "en": "Yes", "bn": "হ্যাঁ" }, { "en": "No", "bn": "না" } ],
+      "prompt": { "en": "Are (4, 2) and (4, 3) in the same column?", "bn": "(৪, ২) আর (৪, ৩) কি একই কলামে আছে?" } },
+    { "id": "ex05", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 0,
+      "options": [ { "en": "Yes", "bn": "হ্যাঁ" }, { "en": "No", "bn": "না" } ],
+      "prompt": { "en": "Are (5, 1) and (1, 1) in the same column?", "bn": "(৫, ১) আর (১, ১) কি একই কলামে আছে?" } },
+    { "id": "ex06", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 0,
+      "options": [ { "en": "(2, 5)", "bn": "(২, ৫)" }, { "en": "(5, 2)", "bn": "(৫, ২)" } ],
+      "prompt": { "en": "Which cell is in the same row as (2, 3)?", "bn": "কোন ঘরটি (২, ৩)-এর একই সারিতে আছে?" } },
+    { "id": "ex07", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 1,
+      "options": [ { "en": "(4, 2)", "bn": "(৪, ২)" }, { "en": "(5, 4)", "bn": "(৫, ৪)" } ],
+      "prompt": { "en": "Which cell is in the same column as (2, 4)?", "bn": "কোন ঘরটি (২, ৪)-এর একই কলামে আছে?" } },
+    { "id": "ex08", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 0,
+      "options": [ { "en": "(4, 3)", "bn": "(৪, ৩)" }, { "en": "(3, 4)", "bn": "(৩, ৪)" } ],
+      "prompt": { "en": "Which cell is one step forward from (3, 3)?", "bn": "(৩, ৩) থেকে এক ঘর সামনে কোন ঘর?" } },
+    { "id": "ex09", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 1,
+      "options": [ { "en": "(1, 5)", "bn": "(১, ৫)" }, { "en": "(2, 4)", "bn": "(২, ৪)" } ],
+      "prompt": { "en": "Which cell is one step to the left of (2, 5)?", "bn": "(২, ৫) থেকে এক ঘর বামে কোন ঘর?" } },
+    { "id": "ex10", "type": "choice", "explore": { "rows": 5, "cols": 5 }, "speakingCells": "default", "answer": 1,
+      "options": [ { "en": "(1, 4)", "bn": "(১, ৪)" }, { "en": "(4, 1)", "bn": "(৪, ১)" } ],
+      "prompt": { "en": "Which cell is in row 4 and column 1?", "bn": "কোন ঘরটি সারি ৪ আর কলাম ১-এ আছে?" } }
+  ]
+}

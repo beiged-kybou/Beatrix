@@ -1,0 +1,33 @@
+{
+  "id": "l05",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 5: Where am I?", "bn": "পাঠ ৫: আমি কোথায়?" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "This time nobody tells you where you are. You start in a hidden cell, and no cell speaks.",
+        "bn": "এবার কেউ তোমাকে বলবে না তুমি কোথায় আছ। তুমি একটি অজানা ঘর থেকে শুরু করবে, আর কোনো ঘর কথা বলবে না।" } },
+      { "id": "p02", "text": {
+        "en": "To find your row, walk back until you hear the thud, and count your steps. If you took 2 steps before the thud, you started in row 3.",
+        "bn": "সারি বের করতে পেছনের দিকে হাঁটো যতক্ষণ না ধুপ শব্দ শোনো, আর পা গোনো। ধুপ শব্দের আগে ২ পা গেলে, তুমি শুরু করেছিলে সারি ৩ থেকে।" } },
+      { "id": "p03", "text": {
+        "en": "To find your column, walk left until you hear the thud, and count your steps the same way.",
+        "bn": "কলাম বের করতে বামে হাঁটো যতক্ষণ না ধুপ শব্দ শোনো, আর একইভাবে পা গোনো।" } },
+      { "id": "p04", "text": {
+        "en": "Remember: your steps plus one. Then press Enter, type the row and press Enter, and type the column and press Enter. Press Alt N to begin.",
+        "bn": "মনে রেখো: যত পা গেলে, তার সাথে এক যোগ করো। তারপর এন্টার চাপো, সারি লিখে এন্টার চাপো, আর কলাম লিখে এন্টার চাপো। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "find-own-position", "rows": 3, "cols": 3, "start": "random", "speakingCells": "default" },
+    { "id": "ex02", "type": "find-own-position", "rows": 3, "cols": 3, "start": "random", "speakingCells": "default" },
+    { "id": "ex03", "type": "find-own-position", "rows": 4, "cols": 4, "start": "random", "speakingCells": "default" },
+    { "id": "ex04", "type": "find-own-position", "rows": 4, "cols": 4, "start": "random", "speakingCells": "default" },
+    { "id": "ex05", "type": "find-own-position", "rows": 5, "cols": 5, "start": "random", "speakingCells": "default" },
+    { "id": "ex06", "type": "find-own-position", "rows": 5, "cols": 5, "start": "random", "speakingCells": "default" },
+    { "id": "ex07", "type": "find-own-position", "rows": 6, "cols": 6, "start": "random", "speakingCells": "default" },
+    { "id": "ex08", "type": "find-own-position", "rows": 7, "cols": 7, "start": "random", "speakingCells": "default" }
+  ]
+}

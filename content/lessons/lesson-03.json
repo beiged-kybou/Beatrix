@@ -1,0 +1,35 @@
+{
+  "id": "l03",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 3: How big is the matrix?", "bn": "পাঠ ৩: ম্যাট্রিক্স কত বড়?" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "Now you will find the size of a matrix by yourself.",
+        "bn": "এবার তুমি নিজেই একটি ম্যাট্রিক্সের আকার বের করবে।" } },
+      { "id": "p02", "text": {
+        "en": "Only three cells speak: the start cell (1, 1), the last cell of row 1, and the last cell of column 1. Every other cell makes a dot sound.",
+        "bn": "শুধু তিনটি ঘর কথা বলবে: শুরুর ঘর (১, ১), সারি ১-এর শেষ ঘর, আর কলাম ১-এর শেষ ঘর। বাকি সব ঘরে টুং শব্দ হবে।" } },
+      { "id": "p03", "text": {
+        "en": "Move right along row 1 until you bump the edge. The last cell tells you the number of columns. Move forward along column 1 until you bump the edge. The last cell tells you the number of rows.",
+        "bn": "সারি ১ ধরে ডানে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে কলামের সংখ্যা বলে দেবে। কলাম ১ ধরে সামনে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে সারির সংখ্যা বলে দেবে।" } },
+      { "id": "p04", "text": {
+        "en": "Then press Enter to go to the answer box. Type the number of rows and press Enter. Then type the number of columns and press Enter. Press Alt N to begin.",
+        "bn": "তারপর এন্টার চেপে উত্তরের ঘরে যাও। সারির সংখ্যা লিখে এন্টার চাপো। তারপর কলামের সংখ্যা লিখে এন্টার চাপো। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "matrix-size", "rows": 2, "cols": 3, "speakingCells": "default" },
+    { "id": "ex02", "type": "matrix-size", "rows": 3, "cols": 2, "speakingCells": "default" },
+    { "id": "ex03", "type": "matrix-size", "rows": 3, "cols": 3, "speakingCells": "default" },
+    { "id": "ex04", "type": "matrix-size", "rows": 4, "cols": 2, "speakingCells": "default" },
+    { "id": "ex05", "type": "matrix-size", "rows": 2, "cols": 5, "speakingCells": "default" },
+    { "id": "ex06", "type": "matrix-size", "rows": 4, "cols": 4, "speakingCells": "default" },
+    { "id": "ex07", "type": "matrix-size", "rows": 5, "cols": 3, "speakingCells": "default" },
+    { "id": "ex08", "type": "matrix-size", "rows": 3, "cols": 6, "speakingCells": "default" },
+    { "id": "ex09", "type": "matrix-size", "rows": 6, "cols": 4, "speakingCells": "default" },
+    { "id": "ex10", "type": "matrix-size", "rows": 5, "cols": 5, "speakingCells": "default" }
+  ]
+}

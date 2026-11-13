@@ -1,0 +1,65 @@
+{
+  "id": "l07",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 7: How far?", "bn": "পাঠ ৭: কত দূরে?" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "How far apart are two cells? Count the steps along the column and the steps along the row, then add them.",
+        "bn": "দুটি ঘর একটি থেকে আরেকটি কত দূরে? কলাম বরাবর কয় পা আর সারি বরাবর কয় পা গোনো, তারপর যোগ করো।" } },
+      { "id": "p02", "text": {
+        "en": "From (2, 1) to (4, 4): the row changes from 2 to 4, that is 2 steps. The column changes from 1 to 4, that is 3 steps. 2 plus 3 is 5 steps.",
+        "bn": "(২, ১) থেকে (৪, ৪): সারি ২ থেকে ৪ হয়, অর্থাৎ ২ পা। কলাম ১ থেকে ৪ হয়, অর্থাৎ ৩ পা। ২ যোগ ৩ সমান ৫ পা।" } },
+      { "id": "p03", "text": {
+        "en": "You can only move forward, back, left and right, never on a slant.",
+        "bn": "তুমি শুধু সামনে, পেছনে, বামে আর ডানে যেতে পারো, কোনাকুনি নয়।" } },
+      { "id": "p04", "text": {
+        "en": "You can check in the matrix: only the two cells in the question speak, and Space tells you what is in a cell. Then type the number and press Enter. Press Alt N to begin.",
+        "bn": "চাইলে ম্যাট্রিক্সে মিলিয়ে দেখতে পারো: শুধু প্রশ্নের দুটি ঘর কথা বলবে, আর স্পেস চাপলে ঘরে কী আছে বলবে। তারপর সংখ্যাটি লিখে এন্টার চাপো। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "number-answer", "answer": 3, "explore": { "rows": 5, "cols": 5 },
+      "speakingCells": [ { "row": 1, "col": 1 }, { "row": 1, "col": 4 } ],
+      "contents": [ { "row": 1, "col": 4, "item": { "en": "ball", "bn": "বল" } } ],
+      "prompt": { "en": "You are at row 1, column 1. The ball is at row 1, column 4. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "তুমি আছ সারি ১, কলাম ১-এ। বলটি আছে সারি ১, কলাম ৪-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex02", "type": "number-answer", "answer": 4, "explore": { "rows": 5, "cols": 5 },
+      "speakingCells": [ { "row": 3, "col": 1 }, { "row": 3, "col": 5 } ],
+      "contents": [ { "row": 3, "col": 5, "item": { "en": "mango", "bn": "আম" } } ],
+      "prompt": { "en": "You are at row 3, column 1. The mango is at row 3, column 5. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "তুমি আছ সারি ৩, কলাম ১-এ। আমটি আছে সারি ৩, কলাম ৫-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex03", "type": "number-answer", "answer": 3, "explore": { "rows": 5, "cols": 5 },
+      "speakingCells": [ { "row": 1, "col": 2 }, { "row": 4, "col": 2 } ],
+      "contents": [ { "row": 4, "col": 2, "item": { "en": "cat", "bn": "বিড়াল" } } ],
+      "prompt": { "en": "You are at row 1, column 2. The cat is at row 4, column 2. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "তুমি আছ সারি ১, কলাম ২-এ। বিড়ালটি আছে সারি ৪, কলাম ২-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex04", "type": "number-answer", "answer": 4, "explore": { "rows": 5, "cols": 5 },
+      "speakingCells": [ { "row": 5, "col": 3 }, { "row": 1, "col": 3 } ],
+      "contents": [ { "row": 1, "col": 3, "item": { "en": "book", "bn": "বই" } } ],
+      "prompt": { "en": "You are at row 5, column 3. The book is at row 1, column 3. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "তুমি আছ সারি ৫, কলাম ৩-এ। বইটি আছে সারি ১, কলাম ৩-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex05", "type": "number-answer", "answer": 5, "explore": { "rows": 5, "cols": 5 },
+      "speakingCells": [ { "row": 2, "col": 1 }, { "row": 4, "col": 4 } ],
+      "contents": [ { "row": 4, "col": 4, "item": { "en": "ball", "bn": "বল" } } ],
+      "prompt": { "en": "You are at row 2, column 1. The ball is at row 4, column 4. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "তুমি আছ সারি ২, কলাম ১-এ। বলটি আছে সারি ৪, কলাম ৪-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex06", "type": "number-answer", "answer": 8, "explore": { "rows": 5, "cols": 5 },
+      "speakingCells": [ { "row": 1, "col": 1 }, { "row": 5, "col": 5 } ],
+      "contents": [ { "row": 5, "col": 5, "item": { "en": "star", "bn": "তারা" } } ],
+      "prompt": { "en": "You are at row 1, column 1. The star is at row 5, column 5. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "তুমি আছ সারি ১, কলাম ১-এ। তারাটি আছে সারি ৫, কলাম ৫-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex07", "type": "number-answer", "answer": 6, "explore": { "rows": 5, "cols": 5 },
+      "speakingCells": [ { "row": 4, "col": 2 }, { "row": 1, "col": 5 } ],
+      "contents": [ { "row": 1, "col": 5, "item": { "en": "fish", "bn": "মাছ" } } ],
+      "prompt": { "en": "You are at row 4, column 2. The fish is at row 1, column 5. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "তুমি আছ সারি ৪, কলাম ২-এ। মাছটি আছে সারি ১, কলাম ৫-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } },
+    { "id": "ex08", "type": "number-answer", "answer": 9, "explore": { "rows": 6, "cols": 6 },
+      "speakingCells": [ { "row": 1, "col": 1 }, { "row": 6, "col": 5 } ],
+      "contents": [ { "row": 6, "col": 5, "item": { "en": "apple", "bn": "আপেল" } } ],
+      "prompt": { "en": "This matrix is 6 by 6. You are at row 1, column 1. The apple is at row 6, column 5. How many steps is the shortest way? Type the number and press Enter.",
+                  "bn": "এই ম্যাট্রিক্সটি ৬ বাই ৬। তুমি আছ সারি ১, কলাম ১-এ। আপেলটি আছে সারি ৬, কলাম ৫-এ। সবচেয়ে কম কয় পা লাগবে? সংখ্যাটি লিখে এন্টার চাপো।" } }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "l04",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 4: Where am I after moving?", "bn": "পাঠ ৪: চলার পর আমি কোথায়?" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "This matrix is big: 10 × 10.",
+        "bn": "এই ম্যাট্রিক্সটি বড়: ১০ × ১০।" } },
+      { "id": "p02", "text": {
+        "en": "First you are told the cell where you start. Then you hear some moves. Right and left move you along the row, so the column number changes. Forward and back move you along the column, so the row number changes.",
+        "bn": "প্রথমে তোমাকে বলা হবে তুমি কোন ঘর থেকে শুরু করছ। তারপর কিছু চলার নির্দেশ শুনবে। ডানে আর বামে গেলে তুমি সারি বরাবর চলো, তাই কলামের নম্বর বদলায়। সামনে আর পেছনে গেলে তুমি কলাম বরাবর চলো, তাই সারির নম্বর বদলায়।" } },
+      { "id": "p03", "text": {
+        "en": "Forward means the row number grows. Back means it gets smaller. Right means the column number grows. Left means it gets smaller.",
+        "bn": "সামনে মানে সারির নম্বর বাড়ে, পেছনে মানে কমে। ডানে মানে কলামের নম্বর বাড়ে, বামে মানে কমে।" } },
+      { "id": "p04", "text": {
+        "en": "Work out in your head where you end up. Then walk there with the arrow keys and press Enter. The cells only make dot sounds, so count carefully. Press R to hear the question again. Press Alt N to begin.",
+        "bn": "মনে মনে হিসাব করো তুমি কোথায় গিয়ে পৌঁছাবে। তারপর তীর চিহ্নের বোতাম দিয়ে সেখানে যাও আর এন্টার চাপো। ঘরগুলো শুধু টুং শব্দ করবে, তাই সাবধানে গুনে চলো। প্রশ্ন আবার শুনতে আর চাপো। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "relative-move", "rows": 10, "cols": 10, "start": "random", "speakingCells": "default",
+      "moves": [ { "dir": "right", "steps": 2 }, { "dir": "forward", "steps": 3 } ] },
+    { "id": "ex02", "type": "relative-move", "rows": 10, "cols": 10, "start": "random", "speakingCells": "default",
+      "moves": [ { "dir": "left", "steps": 1 }, { "dir": "back", "steps": 2 } ] },
+    { "id": "ex03", "type": "relative-move", "rows": 10, "cols": 10, "start": "random", "speakingCells": "default",
+      "moves": [ { "dir": "right", "steps": 3 }, { "dir": "back", "steps": 1 } ] },
+    { "id": "ex04", "type": "relative-move", "rows": 10, "cols": 10, "start": "random", "speakingCells": "default",
+      "moves": [ { "dir": "left", "steps": 2 }, { "dir": "forward", "steps": 4 } ] },
+    { "id": "ex05", "type": "relative-move", "rows": 10, "cols": 10, "start": "random", "speakingCells": "default",
+      "moves": [ { "dir": "right", "steps": 4 }, { "dir": "forward", "steps": 2 }, { "dir": "left", "steps": 1 } ] }
+  ]
+}

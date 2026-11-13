@@ -1,0 +1,289 @@
+{
+  "id": "l11",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 11: The main diagonal",
+    "bn": "পাঠ ১১: প্রধান কর্ণ"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "The main diagonal is the slanted line of cells from the near-left corner to the far-right corner: (1, 1), (2, 2), (3, 3), and so on.",
+          "bn": "প্রধান কর্ণ হলো কাছের বাম কোণা থেকে দূরের ডান কোণা পর্যন্ত কোনাকুনি এক সারি ঘর: (১, ১), (২, ২), (৩, ৩), এভাবে।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "On the main diagonal, the row number and the column number are the same.",
+          "bn": "প্রধান কর্ণের ঘরগুলোতে সারির নম্বর আর কলামের নম্বর একই।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "To walk along it, start at (1, 1) and press forward-right again and again, until you hear the thud.",
+          "bn": "এর ওপর দিয়ে হাঁটতে (১, ১) থেকে শুরু করো আর বারবার সামনে-ডানে চাপো, যতক্ষণ না ধুপ শব্দ শোনো।"
+        }
+      },
+      {
+        "id": "p04",
+        "text": {
+          "en": "If the matrix is not square, the diagonal stops at the first wall it reaches. Press Alt N to begin.",
+          "bn": "ম্যাট্রিক্স বর্গাকার না হলে, কর্ণ প্রথম যে দেয়ালে পৌঁছায় সেখানেই থেমে যায়। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Walk along the main diagonal of this 4 by 4 matrix with forward-right, and count its cells, the first one too. Then press Enter, type the number and press Enter.",
+        "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের প্রধান কর্ণ ধরে সামনে-ডানে হাঁটো, আর প্রথমটিসহ ঘরগুলো গোনো। তারপর এন্টার চাপো, সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "number-answer",
+      "answer": 6,
+      "explore": {
+        "rows": 6,
+        "cols": 6
+      },
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Walk along the main diagonal of this 6 by 6 matrix and count its cells. Then press Enter, type the number and press Enter.",
+        "bn": "এই ৬ বাই ৬ ম্যাট্রিক্সের প্রধান কর্ণ ধরে হাঁটো আর ঘরগুলো গোনো। তারপর এন্টার চাপো, সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "choice",
+      "explore": null,
+      "answer": 0,
+      "options": [
+        {
+          "en": "Yes",
+          "bn": "হ্যাঁ"
+        },
+        {
+          "en": "No",
+          "bn": "না"
+        }
+      ],
+      "prompt": {
+        "en": "Is (3, 3) on the main diagonal?",
+        "bn": "(৩, ৩) কি প্রধান কর্ণে আছে?"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "choice",
+      "explore": null,
+      "answer": 1,
+      "options": [
+        {
+          "en": "Yes",
+          "bn": "হ্যাঁ"
+        },
+        {
+          "en": "No",
+          "bn": "না"
+        }
+      ],
+      "prompt": {
+        "en": "Is (2, 4) on the main diagonal?",
+        "bn": "(২, ৪) কি প্রধান কর্ণে আছে?"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "choice",
+      "explore": null,
+      "answer": 0,
+      "options": [
+        {
+          "en": "Yes",
+          "bn": "হ্যাঁ"
+        },
+        {
+          "en": "No",
+          "bn": "না"
+        }
+      ],
+      "prompt": {
+        "en": "Is (5, 5) on the main diagonal of a 5 by 5 matrix?",
+        "bn": "৫ বাই ৫ ম্যাট্রিক্সে (৫, ৫) কি প্রধান কর্ণে আছে?"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "find-cell",
+      "rows": 6,
+      "cols": 6,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 4,
+        "col": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Go to the 4th cell of the main diagonal of this 6 by 6 matrix and press Enter.",
+        "bn": "এই ৬ বাই ৬ ম্যাট্রিক্সের প্রধান কর্ণের ৪ নম্বর ঘরে গিয়ে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex07",
+      "type": "find-cell",
+      "rows": 5,
+      "cols": 5,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 5,
+        "col": 5
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Go to the last cell of the main diagonal of this 5 by 5 matrix and press Enter.",
+        "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের প্রধান কর্ণের শেষ ঘরে গিয়ে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex08",
+      "type": "number-answer",
+      "answer": 3,
+      "explore": {
+        "rows": 3,
+        "cols": 5
+      },
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "This matrix has 3 rows and 5 columns. Walk along its main diagonal and count the cells. Then press Enter, type the number and press Enter.",
+        "bn": "এই ম্যাট্রিক্সে ৩টি সারি আর ৫টি কলাম আছে। এর প্রধান কর্ণ ধরে হাঁটো আর ঘরগুলো গোনো। তারপর এন্টার চাপো, সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex09",
+      "type": "choice",
+      "explore": null,
+      "answer": 1,
+      "options": [
+        {
+          "en": "(2, 3)",
+          "bn": "(২, ৩)"
+        },
+        {
+          "en": "(3, 3)",
+          "bn": "(৩, ৩)"
+        }
+      ],
+      "prompt": {
+        "en": "Which cell is on the main diagonal?",
+        "bn": "কোন ঘরটি প্রধান কর্ণে আছে?"
+      }
+    },
+    {
+      "id": "ex10",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "star",
+            "bn": "তারা"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "ball",
+            "bn": "বল"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "How many stars are on the main diagonal? Walk along it and press Space in each cell. Careful: there may be stars elsewhere too. Then type the number and press Enter.",
+        "bn": "প্রধান কর্ণে কয়টি তারা আছে? এর ওপর দিয়ে হাঁটো আর প্রতিটি ঘরে স্পেস চাপো। সাবধান: অন্য জায়গাতেও তারা থাকতে পারে। তারপর সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    }
+  ]
+}

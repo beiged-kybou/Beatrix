@@ -1,0 +1,7 @@
+{
+  "_about": "List the key of every recording you have added. Only listed clips are used; everything else falls back to text-to-speech. See audio-scripts/README.md.",
+  "en": [],
+  "bn": [],
+  "alignments": { "en": [], "bn": [] },
+  "sfx": []
+}

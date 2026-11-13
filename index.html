@@ -1,0 +1,34 @@
+<!doctype html>
+<!--
+  File:        index.html
+  What it is:  The single page of the app.
+  What it does: Provides the header, the <main id="app"> area where screens are
+               drawn (by src/ui/screen-manager.js), and the "last spoken" status
+               line. All behaviour is in src/main.js.
+  Run it through a web server (see README.md); ES modules do not load from file://.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>6DotsLab · Matrix</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/matrix.css" />
+    <link rel="stylesheet" href="styles/tutor.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <span class="logo" aria-hidden="true">⠿</span>
+      <span id="app-title">6DotsLab · Matrix</span>
+    </header>
+
+    <main id="app"></main>
+
+    <footer class="status-bar">
+      <span id="status-label">Last spoken</span>:
+      <span id="status"></span>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

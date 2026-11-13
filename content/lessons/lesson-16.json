@@ -1,0 +1,1079 @@
+{
+  "id": "l16",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 16: Adding a row, adding a column",
+    "bn": "পাঠ ১৬: সারির যোগফল, কলামের যোগফল"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "The total of a row is all its numbers added together. Walk along the row, press Space in each cell, and keep adding in your head.",
+          "bn": "কোনো সারির যোগফল মানে তার সব সংখ্যা একসাথে যোগ করা। সারি ধরে হাঁটো, প্রতিটি ঘরে স্পেস চাপো, আর মনে মনে যোগ করতে থাকো।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "For example, if row 1 holds 2, 3 and 1: 2 plus 3 is 5, and 5 plus 1 is 6. The total is 6.",
+          "bn": "যেমন, সারি ১-এ যদি ২, ৩ আর ১ থাকে: ২ যোগ ৩ সমান ৫, আর ৫ যোগ ১ সমান ৬। যোগফল ৬।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "A column total works the same way: walk forward along the column. Press Alt N to begin.",
+          "bn": "কলামের যোগফলও একইভাবে: কলাম ধরে সামনে হাঁটো। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "number-answer",
+      "answer": 6,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Add the numbers in row 1. What is the total? Type the number and press Enter.",
+        "bn": "সারি ১-এর সংখ্যাগুলো যোগ করো। যোগফল কত? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "number-answer",
+      "answer": 10,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Add the numbers in row 2. What is the total? Type the number and press Enter.",
+        "bn": "সারি ২-এর সংখ্যাগুলো যোগ করো। যোগফল কত? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "number-answer",
+      "answer": 9,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Add the numbers in column 1. What is the total? Type the number and press Enter.",
+        "bn": "কলাম ১-এর সংখ্যাগুলো যোগ করো। যোগফল কত? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "number-answer",
+      "answer": 8,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Add the numbers in column 3. What is the total? Type the number and press Enter.",
+        "bn": "কলাম ৩-এর সংখ্যাগুলো যোগ করো। যোগফল কত? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "choice",
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "row 1",
+          "bn": "সারি ১"
+        },
+        {
+          "en": "row 2",
+          "bn": "সারি ২"
+        },
+        {
+          "en": "row 3",
+          "bn": "সারি ৩"
+        }
+      ],
+      "answer": 1,
+      "prompt": {
+        "en": "Which row has the biggest total?",
+        "bn": "কোন সারির যোগফল সবচেয়ে বেশি?"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "number-answer",
+      "answer": 13,
+      "explore": {
+        "rows": 3,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "This matrix has 3 rows and 4 columns. Add the numbers in row 3. Type the number and press Enter.",
+        "bn": "এই ম্যাট্রিক্সে ৩টি সারি আর ৪টি কলাম আছে। সারি ৩-এর সংখ্যাগুলো যোগ করো। সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex07",
+      "type": "number-answer",
+      "answer": 10,
+      "explore": {
+        "rows": 3,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Add the numbers in column 2. Type the number and press Enter.",
+        "bn": "কলাম ২-এর সংখ্যাগুলো যোগ করো। সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex08",
+      "type": "choice",
+      "explore": {
+        "rows": 3,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "column 1",
+          "bn": "কলাম ১"
+        },
+        {
+          "en": "column 2",
+          "bn": "কলাম ২"
+        },
+        {
+          "en": "column 3",
+          "bn": "কলাম ৩"
+        },
+        {
+          "en": "column 4",
+          "bn": "কলাম ৪"
+        }
+      ],
+      "answer": 2,
+      "prompt": {
+        "en": "Which column has the smallest total?",
+        "bn": "কোন কলামের যোগফল সবচেয়ে কম?"
+      }
+    },
+    {
+      "id": "ex09",
+      "type": "number-answer",
+      "answer": 8,
+      "explore": {
+        "rows": 3,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Add the numbers in column 4. Type the number and press Enter.",
+        "bn": "কলাম ৪-এর সংখ্যাগুলো যোগ করো। সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex10",
+      "type": "choice",
+      "explore": {
+        "rows": 3,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "Yes",
+          "bn": "হ্যাঁ"
+        },
+        {
+          "en": "No",
+          "bn": "না"
+        }
+      ],
+      "answer": 0,
+      "prompt": {
+        "en": "Do row 1 and column 2 have the same total?",
+        "bn": "সারি ১ আর কলাম ২-এর যোগফল কি সমান?"
+      }
+    }
+  ]
+}

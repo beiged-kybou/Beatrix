@@ -1,0 +1,52 @@
+/*
+  File:        styles/matrix.css
+  What it is:  The look of the matrix grid only.
+  What it does: Lays out the cells with CSS grid (--rows / --cols are set by
+               src/matrix/matrix-view.js). Row numbers on the left, column
+               numbers along the bottom, row 1 at the bottom (decision C1).
+               Cell size shrinks for big matrices so 15 × 15 still fits.
+*/
+
+.matrix-pane { margin-top: 1rem; }
+
+.matrix-hints {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.matrix-grid {
+  --cell: clamp(18px, calc(min(70vw, 60vh) / var(--cols)), 64px);
+  display: grid;
+  grid-template-columns: 2.2em repeat(var(--cols), var(--cell));
+  grid-auto-rows: var(--cell);
+  gap: 4px;
+  width: max-content;
+  max-width: 100%;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+}
+.matrix-grid.no-axis .axis { visibility: hidden; }
+
+.cell {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 6px;
+}
+.cell.is-cursor {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--text);
+}
+
+.axis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.col-label { align-items: flex-start; }

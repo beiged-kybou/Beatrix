@@ -1,0 +1,850 @@
+{
+  "id": "l14",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 14: The identity matrix",
+    "bn": "পাঠ ১৪: একক ম্যাট্রিক্স"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "Now the cells hold numbers. In an identity matrix, every cell on the main diagonal holds 1, and every other cell holds 0.",
+          "bn": "এখন ঘরগুলোতে সংখ্যা আছে। একক ম্যাট্রিক্সে প্রধান কর্ণের প্রতিটি ঘরে থাকে ১, আর বাকি সব ঘরে থাকে ০।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "It is a square matrix: it has as many rows as columns. It is used a lot in mathematics, and you will meet it again later.",
+          "bn": "এটি একটি বর্গ ম্যাট্রিক্স: এর সারি আর কলামের সংখ্যা সমান। গণিতে এটি অনেক ব্যবহার হয়, পরে তুমি আবার এর দেখা পাবে।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "Walk to a cell and press Space to hear its number. Diagonal steps are allowed. Press Alt N to begin.",
+          "bn": "কোনো ঘরে গিয়ে স্পেস চাপলে তার সংখ্যা শুনবে। কোনাকুনি পা চালু আছে। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "choice",
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        }
+      ],
+      "answer": 0,
+      "options": [
+        {
+          "en": "one",
+          "bn": "এক"
+        },
+        {
+          "en": "zero",
+          "bn": "শূন্য"
+        }
+      ],
+      "prompt": {
+        "en": "This is a 3 by 3 identity matrix. What number is at (2, 2)? Walk there and press Space, then press Enter to choose.",
+        "bn": "এটি একটি ৩ বাই ৩ একক ম্যাট্রিক্স। (২, ২)-এ কোন সংখ্যা আছে? সেখানে গিয়ে স্পেস চাপো, তারপর এন্টার চেপে বেছে নাও।"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "choice",
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        }
+      ],
+      "answer": 1,
+      "options": [
+        {
+          "en": "one",
+          "bn": "এক"
+        },
+        {
+          "en": "zero",
+          "bn": "শূন্য"
+        }
+      ],
+      "prompt": {
+        "en": "What number is at (3, 1) in this identity matrix? Walk there and press Space, then press Enter to choose.",
+        "bn": "এই একক ম্যাট্রিক্সে (৩, ১)-এ কোন সংখ্যা আছে? সেখানে গিয়ে স্পেস চাপো, তারপর এন্টার চেপে বেছে নাও।"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "How many ones are in this 4 by 4 identity matrix? Type the number and press Enter.",
+        "bn": "এই ৪ বাই ৪ একক ম্যাট্রিক্সে কয়টি এক আছে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "number-answer",
+      "answer": 6,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "How many zeros are in this 3 by 3 identity matrix? Type the number and press Enter.",
+        "bn": "এই ৩ বাই ৩ একক ম্যাট্রিক্সে কয়টি শূন্য আছে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "choice",
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        }
+      ],
+      "answer": 1,
+      "options": [
+        {
+          "en": "column 1",
+          "bn": "কলাম ১"
+        },
+        {
+          "en": "column 3",
+          "bn": "কলাম ৩"
+        },
+        {
+          "en": "column 4",
+          "bn": "কলাম ৪"
+        }
+      ],
+      "prompt": {
+        "en": "In row 3 of this 4 by 4 identity matrix, which column holds the one?",
+        "bn": "এই ৪ বাই ৪ একক ম্যাট্রিক্সের সারি ৩-এ কোন কলামে এক আছে?"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "find-cell",
+      "rows": 5,
+      "cols": 5,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 4,
+        "col": 4
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "item": {
+            "en": "zero",
+            "bn": "শূন্য"
+          }
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "item": {
+            "en": "one",
+            "bn": "এক"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "This is a 5 by 5 identity matrix. Find the cell in row 4 that holds one, and press Enter on it.",
+        "bn": "এটি একটি ৫ বাই ৫ একক ম্যাট্রিক্স। সারি ৪-এর যে ঘরে এক আছে সেটি খুঁজে বের করো, আর তার ওপর এন্টার চাপো।"
+      }
+    }
+  ]
+}

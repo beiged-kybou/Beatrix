@@ -1,0 +1,228 @@
+{
+  "id": "l18",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 18: Turn the matrix",
+    "bn": "পাঠ ১৮: ম্যাট্রিক্স ঘুরিয়ে দেখা"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "Turning a matrix makes its rows into columns. Row 1 becomes column 1, row 2 becomes column 2, and so on. In mathematics this is called the transpose.",
+          "bn": "ম্যাট্রিক্স ঘোরালে তার সারিগুলো কলাম হয়ে যায়। সারি ১ হয় কলাম ১, সারি ২ হয় কলাম ২, এভাবে। গণিতে একে বলে ট্রান্সপোজ, বা স্থানান্তর ম্যাট্রিক্স।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "So the thing at (2, 3) moves to (3, 2): the row number and the column number swap places.",
+          "bn": "তাই (২, ৩)-এর জিনিস চলে যায় (৩, ২)-এ: সারি আর কলামের নম্বর জায়গা বদল করে।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "A 2 by 3 matrix becomes a 3 by 2 matrix. The cells on the main diagonal, like (1, 1) and (2, 2), stay where they are. Press Alt N to begin.",
+          "bn": "২ বাই ৩ ম্যাট্রিক্স হয়ে যায় ৩ বাই ২ ম্যাট্রিক্স। প্রধান কর্ণের ঘরগুলো, যেমন (১, ১) আর (২, ২), যেখানে ছিল সেখানেই থাকে। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "number-answer",
+      "answer": 5,
+      "explore": null,
+      "prompt": {
+        "en": "A 2 by 5 matrix is turned. How many rows does it have now? Type the number and press Enter.",
+        "bn": "একটি ২ বাই ৫ ম্যাট্রিক্স ঘোরানো হলো। এখন এর কয়টি সারি? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "number-answer",
+      "answer": 4,
+      "explore": null,
+      "prompt": {
+        "en": "A 4 by 3 matrix is turned. How many columns does it have now? Type the number and press Enter.",
+        "bn": "একটি ৪ বাই ৩ ম্যাট্রিক্স ঘোরানো হলো। এখন এর কয়টি কলাম? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "choice",
+      "explore": null,
+      "speakingCells": "default",
+      "options": [
+        {
+          "en": "(3, 1)",
+          "bn": "(৩, ১)"
+        },
+        {
+          "en": "(1, 3)",
+          "bn": "(১, ৩)"
+        },
+        {
+          "en": "(3, 3)",
+          "bn": "(৩, ৩)"
+        }
+      ],
+      "answer": 0,
+      "prompt": {
+        "en": "The cat is at (1, 3). After turning the matrix, where is the cat?",
+        "bn": "বিড়ালটি আছে (১, ৩)-এ। ম্যাট্রিক্স ঘোরানোর পর বিড়ালটি কোথায়?"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "choice",
+      "explore": null,
+      "speakingCells": "default",
+      "options": [
+        {
+          "en": "(4, 2)",
+          "bn": "(৪, ২)"
+        },
+        {
+          "en": "(2, 4)",
+          "bn": "(২, ৪)"
+        }
+      ],
+      "answer": 0,
+      "prompt": {
+        "en": "The ball is at (2, 4). After turning, where is the ball?",
+        "bn": "বলটি আছে (২, ৪)-এ। ঘোরানোর পর বলটি কোথায়?"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "choice",
+      "explore": null,
+      "speakingCells": "default",
+      "options": [
+        {
+          "en": "the cells on the main diagonal",
+          "bn": "প্রধান কর্ণের ঘরগুলো"
+        },
+        {
+          "en": "the cells in row 1",
+          "bn": "সারি ১-এর ঘরগুলো"
+        },
+        {
+          "en": "the four corners",
+          "bn": "চারটি কোণা"
+        }
+      ],
+      "answer": 0,
+      "prompt": {
+        "en": "Which cells stay in the same place when a matrix is turned?",
+        "bn": "ম্যাট্রিক্স ঘোরালে কোন ঘরগুলো একই জায়গায় থাকে?"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "find-cell",
+      "rows": 3,
+      "cols": 2,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 3,
+        "col": 1
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "apple",
+            "bn": "আপেল"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "cat",
+            "bn": "বিড়াল"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "ball",
+            "bn": "বল"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "book",
+            "bn": "বই"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "mango",
+            "bn": "আম"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "fish",
+            "bn": "মাছ"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Before turning, this matrix was 2 by 3 and the mango was at (1, 3). Now it is turned. Find the mango and press Enter on it.",
+        "bn": "ঘোরানোর আগে এই ম্যাট্রিক্সটি ছিল ২ বাই ৩, আর আমটি ছিল (১, ৩)-এ। এখন এটি ঘোরানো হয়েছে। আমটি খুঁজে বের করো আর তার ওপর এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex07",
+      "type": "choice",
+      "explore": null,
+      "speakingCells": "default",
+      "options": [
+        {
+          "en": "row 1",
+          "bn": "সারি ১"
+        },
+        {
+          "en": "column 1",
+          "bn": "কলাম ১"
+        }
+      ],
+      "answer": 1,
+      "prompt": {
+        "en": "Before turning, row 1 held 2, 5 and 8. After turning, which line holds 2, 5 and 8?",
+        "bn": "ঘোরানোর আগে সারি ১-এ ছিল ২, ৫ আর ৮। ঘোরানোর পর কোন লাইনে ২, ৫ আর ৮ থাকবে?"
+      }
+    },
+    {
+      "id": "ex08",
+      "type": "number-answer",
+      "answer": 6,
+      "explore": null,
+      "prompt": {
+        "en": "A 3 by 3 matrix is turned. How many of its 9 cells move to a new place? (The main diagonal stays.) Type the number and press Enter.",
+        "bn": "একটি ৩ বাই ৩ ম্যাট্রিক্স ঘোরানো হলো। এর ৯টি ঘরের কয়টি নতুন জায়গায় যায়? (প্রধান কর্ণ একই থাকে।) সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    }
+  ]
+}

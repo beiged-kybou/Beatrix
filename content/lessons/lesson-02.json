@@ -1,0 +1,35 @@
+{
+  "id": "l02",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 2: The address of a cell", "bn": "পাঠ ২: ঘরের ঠিকানা" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "Every cell has an address. We write it as (row, column).",
+        "bn": "প্রতিটি ঘরের একটি ঠিকানা আছে। আমরা এটি লিখি (সারি, কলাম) এভাবে।" } },
+      { "id": "p02", "text": {
+        "en": "(2, 3) means row 2, column 3. The row always comes first, then the column.",
+        "bn": "(২, ৩) মানে সারি ২, কলাম ৩। সবসময় আগে সারি, তারপর কলাম।" } },
+      { "id": "p03", "text": {
+        "en": "In these exercises, only the first cell, (1, 1), tells you its address. Every other cell makes a dot sound, so count your steps. If you bump into the edge, you will hear a thud.",
+        "bn": "এই অনুশীলনীগুলোতে শুধু প্রথম ঘর (১, ১) তার ঠিকানা বলবে। বাকি সব ঘরে টুং শব্দ হবে, তাই পা গুনে গুনে চলো। কিনারায় ধাক্কা খেলে একটি ধুপ শব্দ শুনবে।" } },
+      { "id": "p04", "text": {
+        "en": "You always start at (1, 1). When you think you are on the right cell, press Enter. Press R to hear the question again. Press Alt N to begin.",
+        "bn": "তুমি সবসময় (১, ১) থেকে শুরু করবে। ঠিক ঘরে পৌঁছেছ মনে হলে এন্টার চাপো। প্রশ্ন আবার শুনতে আর চাপো। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "find-cell", "rows": 3, "cols": 3, "item": { "en": "apple",  "bn": "আপেল" },   "target": { "row": 2, "col": 2 }, "speakingCells": "default" },
+    { "id": "ex02", "type": "find-cell", "rows": 3, "cols": 3, "item": { "en": "ball",   "bn": "বল" },     "target": { "row": 1, "col": 3 }, "speakingCells": "default" },
+    { "id": "ex03", "type": "find-cell", "rows": 4, "cols": 4, "item": { "en": "mango",  "bn": "আম" },     "target": { "row": 3, "col": 2 }, "speakingCells": "default" },
+    { "id": "ex04", "type": "find-cell", "rows": 4, "cols": 4, "item": { "en": "cat",    "bn": "বিড়াল" },  "target": { "row": 4, "col": 4 }, "speakingCells": "default" },
+    { "id": "ex05", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "apple",  "bn": "আপেল" },   "target": { "row": 2, "col": 2 }, "speakingCells": "default" },
+    { "id": "ex06", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "book",   "bn": "বই" },     "target": { "row": 5, "col": 1 }, "speakingCells": "default" },
+    { "id": "ex07", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "banana", "bn": "কলা" },    "target": { "row": 3, "col": 4 }, "speakingCells": "default" },
+    { "id": "ex08", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "pencil", "bn": "পেন্সিল" }, "target": { "row": 1, "col": 5 }, "speakingCells": "default" },
+    { "id": "ex09", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "fish",   "bn": "মাছ" },    "target": { "row": 4, "col": 3 }, "speakingCells": "default" },
+    { "id": "ex10", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "star",   "bn": "তারা" },   "target": { "row": 5, "col": 5 }, "speakingCells": "default" }
+  ]
+}

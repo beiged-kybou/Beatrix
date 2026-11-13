@@ -1,0 +1,1227 @@
+{
+  "id": "l15",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 15: Numbers in cells",
+    "bn": "পাঠ ১৫: ঘরে ঘরে সংখ্যা"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "Now every cell of the matrix holds a number. This is how matrices are used in mathematics.",
+          "bn": "এখন ম্যাট্রিক্সের প্রতিটি ঘরে একটি সংখ্যা আছে। গণিতে ম্যাট্রিক্স এভাবেই ব্যবহার হয়।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "Every cell tells you its row and column when you arrive. Press Space to hear the number inside it.",
+          "bn": "প্রতিটি ঘরে পৌঁছালে সেটি তার সারি আর কলাম বলবে। ভেতরের সংখ্যা শুনতে স্পেস চাপো।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "To find the biggest or smallest number in a row, walk along the row, press Space in every cell, and remember the biggest or smallest so far. Press Alt N to begin.",
+          "bn": "কোনো সারির সবচেয়ে বড় বা সবচেয়ে ছোট সংখ্যা বের করতে সারি ধরে হাঁটো, প্রতিটি ঘরে স্পেস চাপো, আর এ পর্যন্ত সবচেয়ে বড় বা ছোটটি মনে রাখো। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "number-answer",
+      "answer": 6,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "What number is at (2, 3)? Go there and press Space. Type the number and press Enter.",
+        "bn": "(২, ৩)-এ কোন সংখ্যা আছে? সেখানে গিয়ে স্পেস চাপো। সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "number-answer",
+      "answer": 8,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "What number is at (3, 2)? Type the number and press Enter.",
+        "bn": "(৩, ২)-এ কোন সংখ্যা আছে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "find-cell",
+      "rows": 3,
+      "cols": 3,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 2,
+        "col": 1
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Find the 9. Press Space in the cells to hear their numbers, and press Enter on the 9.",
+        "bn": "৯ খুঁজে বের করো। ঘরগুলোতে স্পেস চেপে সংখ্যা শোনো, আর ৯-এর ঘরে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "choice",
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "the number at (1, 1)",
+          "bn": "(১, ১)-এর সংখ্যা"
+        },
+        {
+          "en": "the number at (3, 3)",
+          "bn": "(৩, ৩)-এর সংখ্যা"
+        }
+      ],
+      "answer": 1,
+      "prompt": {
+        "en": "Which is bigger: the number at (1, 1) or the number at (3, 3)?",
+        "bn": "কোনটি বড়: (১, ১)-এর সংখ্যা, নাকি (৩, ৩)-এর সংখ্যা?"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "number-answer",
+      "answer": 7,
+      "explore": {
+        "rows": 3,
+        "cols": 3
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "4",
+            "bn": "৪"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "2",
+            "bn": "২"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "What is the biggest number in row 1? Type the number and press Enter.",
+        "bn": "সারি ১-এর সবচেয়ে বড় সংখ্যা কোনটি? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "number-answer",
+      "answer": 18,
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "12",
+            "bn": "১২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "15",
+            "bn": "১৫"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "20",
+            "bn": "২০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "11",
+            "bn": "১১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "14",
+            "bn": "১৪"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "18",
+            "bn": "১৮"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "13",
+            "bn": "১৩"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "10",
+            "bn": "১০"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "This matrix is 4 by 4. What number is at (4, 1)? Type the number and press Enter.",
+        "bn": "এই ম্যাট্রিক্সটি ৪ বাই ৪। (৪, ১)-এ কোন সংখ্যা আছে? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex07",
+      "type": "find-cell",
+      "rows": 4,
+      "cols": 4,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 3,
+        "col": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "12",
+            "bn": "১২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "15",
+            "bn": "১৫"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "20",
+            "bn": "২০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "11",
+            "bn": "১১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "14",
+            "bn": "১৪"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "18",
+            "bn": "১৮"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "13",
+            "bn": "১৩"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "10",
+            "bn": "১০"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Find the 0 (zero) and press Enter on it.",
+        "bn": "০ (শূন্য) খুঁজে বের করো আর তার ঘরে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex08",
+      "type": "number-answer",
+      "answer": 3,
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "12",
+            "bn": "১২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "15",
+            "bn": "১৫"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "20",
+            "bn": "২০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "11",
+            "bn": "১১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "14",
+            "bn": "১৪"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "18",
+            "bn": "১৮"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "13",
+            "bn": "১৩"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "10",
+            "bn": "১০"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "What is the smallest number in column 2? Type the number and press Enter.",
+        "bn": "কলাম ২-এর সবচেয়ে ছোট সংখ্যা কোনটি? সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex09",
+      "type": "choice",
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "12",
+            "bn": "১২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "15",
+            "bn": "১৫"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "20",
+            "bn": "২০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "11",
+            "bn": "১১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "14",
+            "bn": "১৪"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "18",
+            "bn": "১৮"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "13",
+            "bn": "১৩"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "10",
+            "bn": "১০"
+          }
+        }
+      ],
+      "options": [
+        {
+          "en": "the number at (2, 2)",
+          "bn": "(২, ২)-এর সংখ্যা"
+        },
+        {
+          "en": "the number at (4, 3)",
+          "bn": "(৪, ৩)-এর সংখ্যা"
+        }
+      ],
+      "answer": 0,
+      "prompt": {
+        "en": "Which is bigger: the number at (2, 2) or the number at (4, 3)?",
+        "bn": "কোনটি বড়: (২, ২)-এর সংখ্যা, নাকি (৪, ৩)-এর সংখ্যা?"
+      }
+    },
+    {
+      "id": "ex10",
+      "type": "number-answer",
+      "answer": 20,
+      "explore": {
+        "rows": 4,
+        "cols": 4
+      },
+      "speakingCells": "default",
+      "contents": [
+        {
+          "row": 1,
+          "col": 1,
+          "item": {
+            "en": "12",
+            "bn": "১২"
+          }
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "item": {
+            "en": "3",
+            "bn": "৩"
+          }
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "item": {
+            "en": "15",
+            "bn": "১৫"
+          }
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "item": {
+            "en": "8",
+            "bn": "৮"
+          }
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "item": {
+            "en": "6",
+            "bn": "৬"
+          }
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "item": {
+            "en": "20",
+            "bn": "২০"
+          }
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "item": {
+            "en": "1",
+            "bn": "১"
+          }
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "item": {
+            "en": "11",
+            "bn": "১১"
+          }
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "item": {
+            "en": "9",
+            "bn": "৯"
+          }
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "item": {
+            "en": "14",
+            "bn": "১৪"
+          }
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "item": {
+            "en": "7",
+            "bn": "৭"
+          }
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "item": {
+            "en": "0",
+            "bn": "০"
+          }
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "item": {
+            "en": "18",
+            "bn": "১৮"
+          }
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "item": {
+            "en": "5",
+            "bn": "৫"
+          }
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "item": {
+            "en": "13",
+            "bn": "১৩"
+          }
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "item": {
+            "en": "10",
+            "bn": "১০"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "What is the biggest number in the whole matrix? Visit every cell. Type the number and press Enter.",
+        "bn": "পুরো ম্যাট্রিক্সের সবচেয়ে বড় সংখ্যা কোনটি? প্রতিটি ঘরে যাও। সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    }
+  ]
+}

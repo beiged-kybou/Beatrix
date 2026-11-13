@@ -1,0 +1,201 @@
+{
+  "id": "l12",
+  "source": "builtin",
+  "version": 1,
+  "title": {
+    "en": "Lesson 12: The other diagonal",
+    "bn": "পাঠ ১২: বিপরীত কর্ণ"
+  },
+  "intro": {
+    "paragraphs": [
+      {
+        "id": "p01",
+        "text": {
+          "en": "There is a second diagonal. It goes from the near-right corner to the far-left corner. In a 5 by 5 matrix: (1, 5), (2, 4), (3, 3), (4, 2), (5, 1).",
+          "bn": "আরেকটি কর্ণ আছে। এটি কাছের ডান কোণা থেকে দূরের বাম কোণা পর্যন্ত যায়। ৫ বাই ৫ ম্যাট্রিক্সে: (১, ৫), (২, ৪), (৩, ৩), (৪, ২), (৫, ১)।"
+        }
+      },
+      {
+        "id": "p02",
+        "text": {
+          "en": "On this diagonal, row plus column is always the same. In a 5 by 5 matrix it is 6: 1 plus 5, 2 plus 4, and so on.",
+          "bn": "এই কর্ণে সারি আর কলাম যোগ করলে সবসময় একই হয়। ৫ বাই ৫ ম্যাট্রিক্সে তা ৬: ১ যোগ ৫, ২ যোগ ৪, এভাবে।"
+        }
+      },
+      {
+        "id": "p03",
+        "text": {
+          "en": "To walk along it, go to the near-right corner and press forward-left again and again. Press Alt N to begin.",
+          "bn": "এর ওপর দিয়ে হাঁটতে কাছের ডান কোণায় যাও, তারপর বারবার সামনে-বামে চাপো। শুরু করতে অল্ট এন চাপো।"
+        }
+      }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    {
+      "id": "ex01",
+      "type": "number-answer",
+      "answer": 5,
+      "explore": {
+        "rows": 5,
+        "cols": 5
+      },
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 5
+        }
+      ],
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Go to the near-right corner, then walk along the other diagonal with forward-left and count its cells. Then press Enter, type the number and press Enter.",
+        "bn": "কাছের ডান কোণায় যাও, তারপর বিপরীত কর্ণ ধরে সামনে-বামে হাঁটো আর ঘরগুলো গোনো। তারপর এন্টার চাপো, সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex02",
+      "type": "choice",
+      "explore": null,
+      "answer": 0,
+      "options": [
+        {
+          "en": "Yes",
+          "bn": "হ্যাঁ"
+        },
+        {
+          "en": "No",
+          "bn": "না"
+        }
+      ],
+      "prompt": {
+        "en": "Is (2, 4) on the other diagonal of a 5 by 5 matrix?",
+        "bn": "৫ বাই ৫ ম্যাট্রিক্সে (২, ৪) কি বিপরীত কর্ণে আছে?"
+      }
+    },
+    {
+      "id": "ex03",
+      "type": "choice",
+      "explore": null,
+      "answer": 1,
+      "options": [
+        {
+          "en": "Yes",
+          "bn": "হ্যাঁ"
+        },
+        {
+          "en": "No",
+          "bn": "না"
+        }
+      ],
+      "prompt": {
+        "en": "Is (2, 2) on the other diagonal of a 5 by 5 matrix?",
+        "bn": "৫ বাই ৫ ম্যাট্রিক্সে (২, ২) কি বিপরীত কর্ণে আছে?"
+      }
+    },
+    {
+      "id": "ex04",
+      "type": "find-cell",
+      "rows": 5,
+      "cols": 5,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 3,
+        "col": 3
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Go to the middle cell of the other diagonal of this 5 by 5 matrix and press Enter.",
+        "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের বিপরীত কর্ণের মাঝের ঘরে গিয়ে এন্টার চাপো।"
+      }
+    },
+    {
+      "id": "ex05",
+      "type": "find-cell",
+      "rows": 4,
+      "cols": 4,
+      "item": {
+        "en": "",
+        "bn": ""
+      },
+      "target": {
+        "row": 2,
+        "col": 3
+      },
+      "speakingCells": "default",
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Go to the second cell of the other diagonal of this 4 by 4 matrix and press Enter. The first cell is the near-right corner.",
+        "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের বিপরীত কর্ণের দ্বিতীয় ঘরে গিয়ে এন্টার চাপো। প্রথম ঘরটি হলো কাছের ডান কোণা।"
+      }
+    },
+    {
+      "id": "ex06",
+      "type": "choice",
+      "explore": null,
+      "answer": 0,
+      "options": [
+        {
+          "en": "(3, 3)",
+          "bn": "(৩, ৩)"
+        },
+        {
+          "en": "(2, 4)",
+          "bn": "(২, ৪)"
+        },
+        {
+          "en": "(1, 1)",
+          "bn": "(১, ১)"
+        }
+      ],
+      "prompt": {
+        "en": "Which cell is on both diagonals of a 5 by 5 matrix?",
+        "bn": "৫ বাই ৫ ম্যাট্রিক্সে কোন ঘরটি দুই কর্ণেই আছে?"
+      }
+    },
+    {
+      "id": "ex07",
+      "type": "choice",
+      "explore": null,
+      "answer": 1,
+      "options": [
+        {
+          "en": "(2, 2)",
+          "bn": "(২, ২)"
+        },
+        {
+          "en": "(3, 2)",
+          "bn": "(৩, ২)"
+        }
+      ],
+      "prompt": {
+        "en": "In a 4 by 4 matrix, which cell is on the other diagonal?",
+        "bn": "৪ বাই ৪ ম্যাট্রিক্সে কোন ঘরটি বিপরীত কর্ণে আছে?"
+      }
+    },
+    {
+      "id": "ex08",
+      "type": "number-answer",
+      "answer": 6,
+      "explore": {
+        "rows": 6,
+        "cols": 6
+      },
+      "speakingCells": [
+        {
+          "row": 1,
+          "col": 6
+        }
+      ],
+      "diagonalMoves": true,
+      "prompt": {
+        "en": "Walk along the other diagonal of this 6 by 6 matrix and count its cells. Start at the near-right corner. Then press Enter, type the number and press Enter.",
+        "bn": "এই ৬ বাই ৬ ম্যাট্রিক্সের বিপরীত কর্ণ ধরে হাঁটো আর ঘরগুলো গোনো। কাছের ডান কোণা থেকে শুরু করো। তারপর এন্টার চাপো, সংখ্যাটি লিখে এন্টার চাপো।"
+      }
+    }
+  ]
+}

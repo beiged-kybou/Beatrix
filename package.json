@@ -1,0 +1,12 @@
+{
+  "name": "6dotslab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Audio-first matrix lessons for blind children in Bangladesh (English + Bangla).",
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.js",
+    "test": "node --test \"tests/*.test.js\"",
+    "audio-scripts": "node tools/generate-audio-scripts.js"
+  }
+}

@@ -1,0 +1,165 @@
+/*
+  File:        styles/base.css
+  What it is:  Colours, fonts and the basic page layout.
+  What it does: High-contrast, large-text styling for low-vision students and
+               sighted teachers. All colours are variables on :root, so the
+               whole look can be changed here. Dark colours by default
+               (yellow on near-black is easiest for many low-vision readers);
+               a light version follows the system light theme.
+*/
+
+:root {
+  --bg: #0d0d0d;
+  --surface: #1c1c1c;
+  --text: #f5f5f5;
+  --muted: #b8b8b8;
+  --accent: #ffd400;      /* cursor, focus, highlight */
+  --accent-text: #000;
+  --line: #4a4a4a;
+  --danger: #ff6b6b;
+  --ok: #6bdc8b;
+  --radius: 10px;
+  --font: system-ui, "Noto Sans Bengali", "Nirmala UI", "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --surface: #f2f2f2;
+    --text: #111111;
+    --muted: #555555;
+    --accent: #0047ab;
+    --accent-text: #ffffff;
+    --line: #9a9a9a;
+    --danger: #b00020;
+    --ok: #1b7f3b;
+    color-scheme: light;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 2px solid var(--line);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.logo { color: var(--accent); font-size: 1.8rem; }
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.status-bar {
+  border-top: 2px solid var(--line);
+  padding: 0.5rem 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+#status { color: var(--text); }
+
+h1 { font-size: 1.8rem; margin: 0.2rem 0; }
+h2 { font-size: 1.4rem; margin: 1.2rem 0 0.4rem; }
+
+/* Strong focus ring everywhere */
+:focus-visible, .text-pane:focus, .lesson-list:focus, .matrix-grid:focus {
+  outline: 4px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.hint { color: var(--muted); font-size: 1rem; }
+.banner {
+  background: var(--danger);
+  color: #000;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+}
+
+/* ---------- Home (lesson list) ---------- */
+.lesson-list { padding: 0.5rem; border-radius: var(--radius); }
+.lesson-list ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+.lesson-item {
+  width: 100%;
+  text-align: start;
+  font: inherit;
+  font-size: 1.4rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.lesson-item:focus { background: var(--accent); color: var(--accent-text); outline: none; }
+.lesson-item .done { font-size: 1rem; }
+.empty { color: var(--muted); }
+
+/* ---------- Lesson screen ---------- */
+.lesson header { margin-bottom: 0.8rem; }
+.step-heading { font-size: 1.3rem; margin: 0; font-weight: 600; }
+.mode-line { margin: 0; color: var(--muted); font-size: 1rem; }
+
+.text-pane {
+  white-space: pre-wrap;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.text-pane mark { background: var(--accent); color: var(--accent-text); border-radius: 4px; padding: 0 2px; }
+
+.answer-box { margin-top: 1rem; display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+.answer-box input {
+  font: inherit;
+  font-size: 2rem;
+  width: 7ch;
+  padding: 0.3rem 0.6rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 3px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.choice-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  max-width: 32rem;
+}
+.choice {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+}
+.choice.is-current { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.choice-list:focus { outline: 4px solid var(--accent); outline-offset: 3px; }
+
+.preview-exit { margin-bottom: 0.8rem; }

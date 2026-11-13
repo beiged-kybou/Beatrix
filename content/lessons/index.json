@@ -1,0 +1,25 @@
+{
+  "_about": "Built-in lessons, grouped in sections, in the order students see them. Each lesson file must follow src/lessons/lesson-schema.js. A section title can be recorded as section.<id> (see audio-scripts/README.md).",
+  "sections": [
+    {
+      "id": "basics",
+      "title": { "en": "Basics", "bn": "শুরুর পাঠ" },
+      "lessons": ["lesson-01.json", "lesson-02.json", "lesson-03.json", "lesson-04.json"]
+    },
+    {
+      "id": "finding",
+      "title": { "en": "Finding your way", "bn": "পথ খোঁজা" },
+      "lessons": ["lesson-05.json", "lesson-06.json", "lesson-07.json", "lesson-08.json", "lesson-09.json"]
+    },
+    {
+      "id": "diagonals",
+      "title": { "en": "Diagonals", "bn": "কর্ণ" },
+      "lessons": ["lesson-10.json", "lesson-11.json", "lesson-12.json", "lesson-13.json", "lesson-14.json"]
+    },
+    {
+      "id": "numbers",
+      "title": { "en": "Numbers in the matrix", "bn": "ম্যাট্রিক্সে সংখ্যা" },
+      "lessons": ["lesson-15.json", "lesson-16.json", "lesson-17.json", "lesson-18.json", "lesson-19.json"]
+    }
+  ]
+}

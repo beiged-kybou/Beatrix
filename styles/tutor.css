@@ -1,0 +1,86 @@
+/*
+  File:        styles/tutor.css
+  What it is:  Styles for tutor mode only (lesson list and lesson editor).
+  What it does: Plain, compact form layout for sighted teachers. In tutor
+               mode the body gets data-mode="tutor" and a smaller base size.
+*/
+
+body[data-mode="tutor"] { font-size: 1rem; }
+body[data-mode="tutor"] .app-header::after {
+  content: "Tutor mode";
+  margin-inline-start: auto;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.tutor .btn, .preview-exit {
+  font: inherit;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+.tutor .btn:hover { border-color: var(--accent); }
+.tutor .btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.tutor .btn.danger { color: var(--danger); }
+.tutor .btn.small { padding: 0.25rem 0.6rem; font-size: 0.9rem; }
+.tutor .btn:disabled { opacity: 0.4; cursor: default; }
+
+.tutor-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.tools { display: flex; gap: 0.6rem; align-items: flex-end; flex-wrap: wrap; margin: 1rem 0; }
+.status-message:not(:empty) {
+  background: var(--surface);
+  border-inline-start: 4px solid var(--accent);
+  padding: 0.5rem 0.8rem;
+  white-space: pre-wrap;
+}
+
+.lesson-table { width: 100%; border-collapse: collapse; }
+.lesson-table th, .lesson-table td { text-align: start; padding: 0.5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.row-actions { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+
+.group { border: 2px solid var(--line); border-radius: var(--radius); margin: 1rem 0; padding: 0.8rem 1rem 1rem; }
+.group > legend { font-weight: 700; padding: 0 0.4rem; }
+
+.field { display: flex; flex-direction: column; gap: 0.2rem; margin: 0.4rem 0; }
+.field-checkbox { flex-direction: row; align-items: center; gap: 0.5rem; }
+.field input, .field select, .field textarea {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--line);
+  border-radius: 6px;
+}
+.field-number input { width: 7rem; }
+.field textarea { width: 100%; resize: vertical; }
+.bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; margin: 0.4rem 0; }
+.bilingual-label { grid-column: 1 / -1; font-weight: 600; }
+@media (max-width: 700px) { .bilingual { grid-template-columns: 1fr; } }
+
+.row-of-fields, .cell-field { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-end; }
+.cell-field .bilingual-label { flex-basis: 100%; }
+
+.item-box { border: 1px solid var(--line); border-radius: 8px; padding: 0.6rem 0.8rem; margin: 0.6rem 0; }
+.item-box h4 { margin: 0 0 0.3rem; }
+details.exercise > summary { cursor: pointer; font-weight: 600; }
+.exercise-body { padding-top: 0.5rem; }
+.item-buttons { display: flex; gap: 0.4rem; margin-top: 0.6rem; }
+
+.recorder-pair { display: grid; gap: 0.3rem; margin: 0.3rem 0 0.6rem; }
+.recorder { display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; font-size: 0.9rem; }
+.recorder-status { color: var(--muted); }
+
+.help { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0; }
+.check-line { font-weight: 600; }
+.move-number { font-weight: 600; align-self: center; }
+.content-row, .option-row { border-top: 1px dashed var(--line); padding-top: 0.4rem; }
+.content-row .bilingual, .option-row .bilingual { flex: 1; min-width: 16rem; }
+
+.errors:not(:empty) { border: 2px solid var(--danger); border-radius: 8px; padding: 0.5rem 1rem; color: var(--danger); }
+.actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem; }

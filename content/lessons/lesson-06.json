@@ -1,0 +1,48 @@
+{
+  "id": "l06",
+  "source": "builtin",
+  "version": 1,
+  "title": { "en": "Lesson 6: Corners, edges and the middle", "bn": "পাঠ ৬: কোণা, কিনারা আর মাঝখান" },
+  "intro": {
+    "paragraphs": [
+      { "id": "p01", "text": {
+        "en": "Some places in a matrix are easy to find without counting. We call them landmarks.",
+        "bn": "ম্যাট্রিক্সের কিছু জায়গা না গুনেও সহজে খুঁজে পাওয়া যায়। এদের আমরা বলি চেনা জায়গা।" } },
+      { "id": "p02", "text": {
+        "en": "A corner has walls on two sides. In a corner, you hear a thud in two directions. There are four corners: near-left, near-right, far-left and far-right.",
+        "bn": "কোণার ঘরের দুই পাশে দেয়াল থাকে। কোণায় থাকলে দুই দিকে ধুপ শব্দ শুনবে। চারটি কোণা আছে: কাছের বাম, কাছের ডান, দূরের বাম আর দূরের ডান।" } },
+      { "id": "p03", "text": {
+        "en": "Near means row 1, the row closest to you. Far means the last row. An edge is the whole line of cells next to a wall.",
+        "bn": "কাছের মানে সারি ১, তোমার সবচেয়ে কাছের সারি। দূরের মানে শেষ সারি। কিনারা হলো দেয়ালের পাশের পুরো এক লাইন ঘর।" } },
+      { "id": "p04", "text": {
+        "en": "The middle cell has the same number of steps to the walls on each side. In a 5 by 5 matrix, the middle is row 3, column 3.",
+        "bn": "মাঝের ঘর থেকে দুই পাশের দেয়াল সমান দূরে। ৫ বাই ৫ ম্যাট্রিক্সে মাঝের ঘর হলো সারি ৩, কলাম ৩।" } },
+      { "id": "p05", "text": {
+        "en": "Only the start cell, (1, 1), speaks. Go to the place and press Enter. Press Alt N to begin.",
+        "bn": "শুধু শুরুর ঘর (১, ১) কথা বলবে। জায়গাটিতে গিয়ে এন্টার চাপো। শুরু করতে অল্ট এন চাপো।" } }
+    ],
+    "explore": null
+  },
+  "exercises": [
+    { "id": "ex01", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "", "bn": "" }, "target": { "row": 1, "col": 5 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the near-right corner of this 5 by 5 matrix and press Enter.", "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের কাছের ডান কোণায় গিয়ে এন্টার চাপো।" } },
+    { "id": "ex02", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "", "bn": "" }, "target": { "row": 5, "col": 1 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the far-left corner of this 5 by 5 matrix and press Enter.", "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের দূরের বাম কোণায় গিয়ে এন্টার চাপো।" } },
+    { "id": "ex03", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "", "bn": "" }, "target": { "row": 5, "col": 5 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the far-right corner of this 5 by 5 matrix and press Enter.", "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের দূরের ডান কোণায় গিয়ে এন্টার চাপো।" } },
+    { "id": "ex04", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "", "bn": "" }, "target": { "row": 3, "col": 3 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the middle cell of this 5 by 5 matrix and press Enter.", "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের মাঝের ঘরে গিয়ে এন্টার চাপো।" } },
+    { "id": "ex05", "type": "find-cell", "rows": 3, "cols": 3, "item": { "en": "", "bn": "" }, "target": { "row": 2, "col": 2 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the middle cell of this 3 by 3 matrix and press Enter.", "bn": "এই ৩ বাই ৩ ম্যাট্রিক্সের মাঝের ঘরে গিয়ে এন্টার চাপো।" } },
+    { "id": "ex06", "type": "find-cell", "rows": 7, "cols": 7, "item": { "en": "", "bn": "" }, "target": { "row": 4, "col": 4 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the middle cell of this 7 by 7 matrix and press Enter.", "bn": "এই ৭ বাই ৭ ম্যাট্রিক্সের মাঝের ঘরে গিয়ে এন্টার চাপো।" } },
+    { "id": "ex07", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "", "bn": "" }, "target": { "row": 5, "col": 3 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the middle cell of the far row of this 5 by 5 matrix and press Enter.", "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের দূরের সারির মাঝের ঘরে গিয়ে এন্টার চাপো।" } },
+    { "id": "ex08", "type": "find-cell", "rows": 6, "cols": 4, "item": { "en": "", "bn": "" }, "target": { "row": 6, "col": 4 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the far-right corner of this 6 by 4 matrix and press Enter.", "bn": "এই ৬ বাই ৪ ম্যাট্রিক্সের দূরের ডান কোণায় গিয়ে এন্টার চাপো।" } },
+    { "id": "ex09", "type": "find-cell", "rows": 7, "cols": 7, "item": { "en": "", "bn": "" }, "target": { "row": 4, "col": 1 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the middle cell of the left edge of this 7 by 7 matrix and press Enter.", "bn": "এই ৭ বাই ৭ ম্যাট্রিক্সের বাম কিনারার মাঝের ঘরে গিয়ে এন্টার চাপো।" } },
+    { "id": "ex10", "type": "find-cell", "rows": 5, "cols": 5, "item": { "en": "", "bn": "" }, "target": { "row": 3, "col": 5 }, "speakingCells": "default",
+      "prompt": { "en": "Go to the middle cell of the right edge of this 5 by 5 matrix and press Enter.", "bn": "এই ৫ বাই ৫ ম্যাট্রিক্সের ডান কিনারার মাঝের ঘরে গিয়ে এন্টার চাপো।" } }
+  ]
+}
