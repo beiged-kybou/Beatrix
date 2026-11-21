@@ -34,6 +34,10 @@ The file name is always **`<key>.mp3`**. The key is the same in both languages; 
 
 Lesson keys mean: `l02.ex03.prompt` = lesson 2, exercise 3, the question. `l08.ex06.opt2` = lesson 8, exercise 6, answer option 2 (read with its number: "2. (5, 2)"). `l01.intro.p04` = lesson 1, introduction paragraph 4. `l01.title` = lesson 1's title.
 
+**Reader's view keys.** Paragraphs and questions that talk about directions have a second text for the reader's view (row 1 at the top). Their keys end in `r` or `_reader`: `l01.intro.p03r` (paragraph), `l06.ex01.prompt_reader` (question). Both are in the CSV scripts. Without that recording the app uses TTS for the reader's text; it never plays the screen-view recording for it.
+
+**Sentence clips.** A paragraph can also be recorded one sentence at a time: `l01.intro.p03.s01`, `l01.intro.p03.s02`, … (reader's view: `l01.intro.p03r.s01`). Space plays them in order. `tools/generate-gemini-sentences.py` makes these for Bangla (`--reader` for the reader's view ones).
+
 ## 3. Turn a recording on
 
 A recording is only used once its key is listed in **`assets/audio/manifest.json`**:

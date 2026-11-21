@@ -6,6 +6,8 @@
  *   - registerStrings()    sets them directly (for Node tools and tests)
  *   - getLang()/setLang()  active language; remembered on this device
  *   - t('spoken.row', {n}) looks up a phrase in the active language and fills {placeholders}
+ *   - viewKey('screen.forward_hint')  the '…_reader' version of a phrase in the
+ *                        reader's view (config/pov.js), when one exists
  *   - pickText({en,bn})    picks the active language from a bilingual text,
  *                          falling back to the other language if it is empty (decision C9)
  *   Strings sections: 'spoken' (phrases the app says; each has a clip key ui.<name>),
@@ -74,6 +76,17 @@ export function t(path, vars = {}, lang = getLang()) {
   const lookup = (l) => path.split('.').reduce((obj, k) => obj?.[k], strings[l]);
   const raw = lookup(lang) ?? lookup('en') ?? path;
   return fillTemplate(raw, vars);
+}
+
+/**
+ * The phrase path for the current matrix view: 'path_reader' in the reader's
+ * view if that phrase exists, otherwise 'path' (it is the same in both views).
+ */
+export function viewKey(path, pov = getState('pov')) {
+  if (pov !== 'reader') return path;
+  const readerPath = `${path}_reader`;
+  const exists = LANGUAGES.some((l) => readerPath.split('.').reduce((obj, k) => obj?.[k], strings[l]) !== undefined);
+  return exists ? readerPath : path;
 }
 
 /** Replace {name} placeholders. */

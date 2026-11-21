@@ -13,21 +13,30 @@
         "text": {
           "en": "Until now you moved forward, back, left or right. Now you can also move on a slant: diagonally.",
           "bn": "এতদিন তুমি সামনে, পেছনে, বামে বা ডানে চলেছ। এবার তুমি কোনাকুনিও চলতে পারবে।"
-        }
+        },
+        "textReader": {
+        "en": "Until now you moved up, down, left or right. Now you can also move on a slant: diagonally.",
+        "bn": "এতদিন তুমি উপরে, নিচে, বামে বা ডানে চলেছ। এবার তুমি কোনাকুনিও চলতে পারবে।" }
       },
       {
         "id": "p02",
         "text": {
           "en": "One diagonal step changes the row and the column together. Forward-right adds one to the row and one to the column: from (1, 1) you go to (2, 2).",
           "bn": "এক কোনাকুনি পায়ে সারি আর কলাম একসাথে বদলায়। সামনে-ডানে গেলে সারিতে এক আর কলামে এক যোগ হয়: (১, ১) থেকে তুমি যাবে (২, ২)-এ।"
-        }
+        },
+        "textReader": {
+        "en": "One diagonal step changes the row and the column together. Down-right adds one to the row and one to the column: from (1, 1) you go to (2, 2).",
+        "bn": "এক কোনাকুনি পায়ে সারি আর কলাম একসাথে বদলায়। নিচে-ডানে গেলে সারিতে এক আর কলামে এক যোগ হয়: (১, ১) থেকে তুমি যাবে (২, ২)-এ।" }
       },
       {
         "id": "p03",
         "text": {
           "en": "The keys: E or Page Up is forward-right. Q or Home is forward-left. C or Page Down is back-right. Z or End is back-left. On a number pad, use 9, 7, 3 and 1.",
           "bn": "বোতামগুলো: E বা পেজ আপ মানে সামনে-ডানে। Q বা হোম মানে সামনে-বামে। C বা পেজ ডাউন মানে পেছনে-ডানে। Z বা এন্ড মানে পেছনে-বামে। নম্বর প্যাডে ৯, ৭, ৩ আর ১ ব্যবহার করো।"
-        }
+        },
+        "textReader": {
+        "en": "The keys: C or Page Down is down-right. Z or End is down-left. E or Page Up is up-right. Q or Home is up-left. On a number pad, use 3, 1, 9 and 7.",
+        "bn": "বোতামগুলো: C বা পেজ ডাউন মানে নিচে-ডানে। Z বা এন্ড মানে নিচে-বামে। E বা পেজ আপ মানে উপরে-ডানে। Q বা হোম মানে উপরে-বামে। নম্বর প্যাডে ৩, ১, ৯ আর ৭ ব্যবহার করো।" }
       },
       {
         "id": "p04",

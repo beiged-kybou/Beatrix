@@ -3,7 +3,10 @@
 File:        tools/generate-gemini-sentences.py
 What it is:  Generates standalone, discrete sentence-by-sentence audio clips (dari to dari)
              using Gemini Live API (gemini-3.8-live) with voice 'Fenrir'.
-Usage:       .venv/bin/python tools/generate-gemini-sentences.py [--lesson l03] [--all] [--force]
+Usage:       .venv/bin/python tools/generate-gemini-sentences.py [--lesson l03] [--all] [--force] [--reader]
+             (on Windows: .venv\\Scripts\\python ...)
+             --reader  makes the clips for the reader's view paragraphs instead
+                       ("textReader" in the lesson files, keys like l01.intro.p03r.s01).
 """
 
 import argparse
@@ -68,7 +71,7 @@ def pcm_to_mp3(pcm_data: bytes, out_mp3: Path):
         if tmp_wav.exists():
             tmp_wav.unlink()
 
-def extract_sentences_from_lesson(lesson_path: Path):
+def extract_sentences_from_lesson(lesson_path: Path, reader: bool = False):
     with open(lesson_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     lid = data["id"]
@@ -77,8 +80,12 @@ def extract_sentences_from_lesson(lesson_path: Path):
     
     sentences = []
     for par in pars:
-        pid = par["id"]
-        bn_text = par.get("text", {}).get("bn", "")
+        # Reader's view: only paragraphs that have their own reader text (key suffix "r",
+        # the same rule as clipKeyForParagraph in src/lessons/lesson-schema.js).
+        if reader and not (par.get("textReader") or {}).get("bn", "").strip():
+            continue
+        pid = par["id"] + ("r" if reader else "")
+        bn_text = par.get("textReader" if reader else "text", {}).get("bn", "")
         # Split on Dari '।'
         parts = [s.strip() for s in bn_text.split("।") if s.strip()]
         for i, raw_s in enumerate(parts):
@@ -140,6 +147,7 @@ async def main():
     parser.add_argument("--all", action="store_true", help="Generate all lessons.")
     parser.add_argument("--voice", default="Fenrir", help="Gemini voice name (default: Fenrir).")
     parser.add_argument("--force", action="store_true", help="Overwrite existing audio files.")
+    parser.add_argument("--reader", action="store_true", help="Make the reader's view paragraph clips (textReader).")
     args = parser.parse_args()
 
     client = genai.Client(api_key=GEMINI_API_KEY, http_options={"api_version": "v1beta"})
@@ -153,7 +161,7 @@ async def main():
     all_sentences = []
     for lf in lesson_files:
         if lf.exists():
-            all_sentences.extend(extract_sentences_from_lesson(lf))
+            all_sentences.extend(extract_sentences_from_lesson(lf, args.reader))
 
     print(f"Collected {len(all_sentences)} sentence clips to process.")
     generated_keys = []

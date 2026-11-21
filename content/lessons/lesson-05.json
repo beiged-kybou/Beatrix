@@ -10,7 +10,10 @@
         "bn": "এবার কেউ তোমাকে বলবে না তুমি কোথায় আছ। তুমি একটি অজানা ঘর থেকে শুরু করবে, আর কোনো ঘর কথা বলবে না।" } },
       { "id": "p02", "text": {
         "en": "To find your row, walk back until you hear the thud, and count your steps. If you took 2 steps before the thud, you started in row 3.",
-        "bn": "সারি বের করতে পেছনের দিকে হাঁটো যতক্ষণ না ধুপ শব্দ শোনো, আর পা গোনো। ধুপ শব্দের আগে ২ পা গেলে, তুমি শুরু করেছিলে সারি ৩ থেকে।" } },
+        "bn": "সারি বের করতে পেছনের দিকে হাঁটো যতক্ষণ না ধুপ শব্দ শোনো, আর পা গোনো। ধুপ শব্দের আগে ২ পা গেলে, তুমি শুরু করেছিলে সারি ৩ থেকে।" },
+        "textReader": {
+        "en": "To find your row, walk up until you hear the thud, and count your steps. If you took 2 steps before the thud, you started in row 3.",
+        "bn": "সারি বের করতে উপরের দিকে হাঁটো যতক্ষণ না ধুপ শব্দ শোনো, আর পা গোনো। ধুপ শব্দের আগে ২ পা গেলে, তুমি শুরু করেছিলে সারি ৩ থেকে।" } },
       { "id": "p03", "text": {
         "en": "To find your column, walk left until you hear the thud, and count your steps the same way.",
         "bn": "কলাম বের করতে বামে হাঁটো যতক্ষণ না ধুপ শব্দ শোনো, আর একইভাবে পা গোনো।" } },

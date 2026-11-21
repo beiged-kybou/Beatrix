@@ -8,6 +8,7 @@
     "start": "node tools/serve.js",
     "test": "node --test \"tests/*.test.js\"",
     "audio-scripts": "node tools/generate-audio-scripts.js",
-    "audio:generate": ".venv/bin/python tools/generate-gemini-sentences.py"
+    "audio:generate": ".venv/bin/python tools/generate-gemini-sentences.py",
+    "audio:generate:win": ".venv\\Scripts\\python tools/generate-gemini-sentences.py"
   }
 }

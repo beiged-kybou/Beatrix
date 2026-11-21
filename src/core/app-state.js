@@ -9,6 +9,7 @@
  *   mode            'student' | 'tutor'               which mode is on
  *   textUnit        'letter' | 'word' | 'sentence'    text navigation unit
  *   transcriptMode  boolean                           Alt+T, A toggles it
+ *   pov             'reader' | 'screen'               matrix view (Alt+P), see config/pov.js
  * Not stored here: per-screen details (cursor position, current exercise).
  *   Those belong to the screen that owns them.
  * Depends on:  core/event-bus.js
@@ -19,8 +20,9 @@ import { emit } from './event-bus.js';
 const state = {
   language: 'en',
   mode: 'student',
-  textUnit: 'word',
+  textUnit: 'sentence',
   transcriptMode: false,
+  pov: 'reader',
 };
 
 /** Read one state value. */

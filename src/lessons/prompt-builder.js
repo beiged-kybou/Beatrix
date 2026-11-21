@@ -12,18 +12,22 @@
  *     relative-move: the start sentence ("You are at row 4, column 7") comes
  *                    first, joined from small clips (a random start can't be recorded)
  *     choice:        the options follow ("1. Yes. 2. No."), clip keys <…>.opt1, opt2…
+ *   Move words follow the view (config/pov.js): "forward" in the screen view,
+ *   "down" in the reader's view (templates ending in "_reader", see viewKey()).
+ *   An exercise prompt can have a reader's version (promptReader), see lesson-schema.js.
  * Depends on:  i18n/language.js, i18n/numbers.js, lessons/lesson-schema.js,
- *              audio/phrase-composer.js
+ *              audio/phrase-composer.js, config/pov.js
  */
 
-import { getLang, t, pickTextInfo } from '../i18n/language.js';
+import { getLang, t, pickTextInfo, viewKey } from '../i18n/language.js';
 import { formatNumber } from '../i18n/numbers.js';
-import { clipKeyForPrompt, clipKeyForOption } from './lesson-schema.js';
+import { clipKeyForPrompt, clipKeyForOption, povText } from './lesson-schema.js';
 import { youAreAt } from '../audio/phrase-composer.js';
+import { currentPov } from '../config/pov.js';
 
 /** The main question (without start sentence or options). @returns {{text:string, lang:string}} */
 function mainQuestion(exercise, lang) {
-  const own = pickTextInfo(exercise.prompt, lang);
+  const own = pickTextInfo(povText(exercise, 'prompt'), lang);
   if (own.text) return own;
   const n = (v) => formatNumber(v, lang);
 
@@ -44,11 +48,11 @@ function mainQuestion(exercise, lang) {
 }
 
 /** "Move 2 steps right along the row, then 3 steps forward along the column" */
-export function describeMoves(moves, lang = getLang()) {
+export function describeMoves(moves, lang = getLang(), pov = currentPov()) {
   const phrases = moves.map((m) => {
     const dir = m.dir.replace('-', '_'); // 'forward-right' -> template key 'move_forward_right_…'
     const key = m.steps === 1 ? `templates.move_${dir}_one` : `templates.move_${dir}_many`;
-    return t(key, { n: formatNumber(m.steps, lang) }, lang);
+    return t(viewKey(key, pov), { n: formatNumber(m.steps, lang) }, lang);
   });
   const joined = phrases.join(t('templates.move_join', {}, lang));
   return joined.charAt(0).toUpperCase() + joined.slice(1);

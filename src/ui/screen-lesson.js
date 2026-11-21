@@ -8,48 +8,56 @@
  *     - the answer box  (number answers; rows → columns answers)
  *     - the option list (choice exercises)
  *   and turns keyboard commands into actions:
- *     arrows in matrix → move + dot / speech / edge bump
+ *     arrows in matrix → move + dot / speech / edge bump; ↑/↓ follow the view
+ *                        chosen with Alt+P (config/pov.js)
  *     Space in matrix  → "what is here" if cells hold things, else "where am I"
  *     ↑ ↓ / 1–4 in options → read / choose an answer
  *     Enter            → answer (celebration or "oh-oh"), or go to the task
  *     R                → speak the question (decision C2: only on R)
  *     Alt+N            → next step / skip (decision C5)
- *     Alt+L/W/S, Alt+T A, Alt+B, Alt+H, Alt+M, Esc
+ *     Ctrl+↓ / Ctrl+↑  → next / previous part: text → matrix → answer (Tab too)
+ *     Alt+P            → reader's view ↔ screen view (redraws the step)
+ *     Space in text    → play / pause all;  Alt+L/W/S, Alt+T A, Alt+B, Alt+H, Alt+M, Esc
+ *   Every step starts with the focus on the text / question (iteration 6).
  *   The decisions about right/wrong live in lessons/exercise-session.js;
  *   this file only connects them to the screen and to sound.
  * Mount:       mountLesson(root, { lesson, onExit, preview }) -> cleanup function
- * Depends on:  lessons/*, matrix/*, ui/text-pane.js, ui/answer-box.js, audio/*,
- *              i18n/language.js, storage/progress-store.js, core/*
+ * Depends on:  lessons/*, matrix/*, ui/text-pane.js, ui/answer-box.js,
+ *              ui/area-cycle.js, audio/*, i18n/language.js, config/pov.js,
+ *              storage/progress-store.js, core/*
  */
 
 import { createLessonRunner } from '../lessons/lesson-runner.js';
 import { createExerciseSession, createExploreSession } from '../lessons/exercise-session.js';
 import { promptText, promptSpeech, optionParts } from '../lessons/prompt-builder.js';
-import { clipKeyForParagraph, clipKeyForPrompt } from '../lessons/lesson-schema.js';
+import { clipKeyForParagraph, clipKeyForPrompt, povText } from '../lessons/lesson-schema.js';
 import { renderMatrix } from '../matrix/matrix-view.js';
 import { createMatrixAnnouncer } from '../matrix/matrix-announcer.js';
 import { createTextPane } from './text-pane.js';
 import { createAnswerBox } from './answer-box.js';
 import { createChoiceList } from './choice-list.js';
+import { nextArea } from './area-cycle.js';
 import * as speech from '../audio/speech-service.js';
 import * as sfx from '../audio/sound-effects.js';
 import { spoken } from '../audio/phrase-composer.js';
-import { t, pickTextInfo, setLang, otherLang } from '../i18n/language.js';
+import { t, pickTextInfo, setLang, otherLang, viewKey } from '../i18n/language.js';
+import { moveFor, rowOneAtTop, togglePov, currentPov } from '../config/pov.js';
 import { formatNumber } from '../i18n/numbers.js';
 import { markFinished } from '../storage/progress-store.js';
 import { SETTINGS } from '../config/settings.js';
 import { getState, setState } from '../core/app-state.js';
 import { on } from '../core/event-bus.js';
 
+/** Arrow / diagonal commands -> direction on the screen (pov.js makes it a matrix move). */
 const MOVE_COMMANDS = {
-  MOVE_FORWARD: 'forward',
-  MOVE_BACK: 'back',
+  MOVE_UP: 'up',
+  MOVE_DOWN: 'down',
   MOVE_LEFT: 'left',
   MOVE_RIGHT: 'right',
-  MOVE_FORWARD_RIGHT: 'forward-right',
-  MOVE_FORWARD_LEFT: 'forward-left',
-  MOVE_BACK_RIGHT: 'back-right',
-  MOVE_BACK_LEFT: 'back-left',
+  MOVE_UP_RIGHT: 'up-right',
+  MOVE_UP_LEFT: 'up-left',
+  MOVE_DOWN_RIGHT: 'down-right',
+  MOVE_DOWN_LEFT: 'down-left',
 };
 const UNIT_COMMANDS = { TEXT_UNIT_LETTER: 'letter', TEXT_UNIT_WORD: 'word', TEXT_UNIT_SENTENCE: 'sentence' };
 const CHOOSE_COMMANDS = { CHOOSE_1: 0, CHOOSE_2: 1, CHOOSE_3: 2, CHOOSE_4: 3 };
@@ -139,7 +147,8 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
         label: t('templates.matrix_label', { rows: m.rows, cols: m.cols }),
         // Row/column numbers would give the answer away when finding your own cell.
         showAxisNumbers: SETTINGS.showAxisNumbers && !session.asksForStart,
-        hints: { forward: t('screen.forward_hint'), right: t('screen.right_hint') },
+        hints: { forward: t(viewKey('screen.forward_hint')), right: t('screen.right_hint') },
+        rowOneAtTop: rowOneAtTop(),
         formatNumber: (n) => formatNumber(n, getState('language')),
       });
       const pos = keepPos ?? session.position();
@@ -173,7 +182,7 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
     const lang = getState('language');
     if (s.kind === 'intro') {
       return lesson.intro.paragraphs.map((p) => {
-        const info = pickTextInfo(p.text, lang);
+        const info = pickTextInfo(povText(p, 'text'), lang);
         return { text: info.text, lang: info.lang, clipKey: clipKeyForParagraph(lesson, p) };
       });
     }
@@ -200,14 +209,35 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
   }
 
   function renderModeLine() {
-    modeLine.textContent = t('screen.text_navigation_hint');
+    const unit = t(`spoken.unit_${getState('textUnit')}`);
+    const audio = getState('transcriptMode') ? ` · ${t('screen.audio_word_mode')}` : '';
+    const pov = t(`screen.view_${currentPov()}`);
+    modeLine.textContent = `${t('screen.reading_by')}: ${unit}${audio} · ${t('screen.text_navigation_hint')} · ${pov}`;
   }
 
-  /** Where the keyboard focus goes when a step opens. */
+  /** Every step starts on the text / question (iteration 6). */
   function focusForStep() {
-    const s = step();
-    if (s.kind === 'exercise' && view) view.focus();
-    else if (s.kind === 'exercise' && (answerBox || choiceList)) focusAnswer();
+    textPane.focus();
+  }
+
+  /** The parts of this step, in Ctrl+↓ order. */
+  function areas() {
+    return ['text', view && 'matrix', answerBox && 'answer', choiceList && 'choice'].filter(Boolean);
+  }
+
+  /** Ctrl+↓ / Ctrl+↑ (and Tab / Shift+Tab): focus the next / previous part and say its name. */
+  function moveToArea(context, stepBy) {
+    const area = nextArea(areas(), context, stepBy);
+    if (!area) return;
+    focusArea(area);
+    speech.speak([spoken(`area_${area}`)]);
+  }
+
+  /** Focus one part; falls back to the text if this step does not have it. */
+  function focusArea(area) {
+    if (area === 'matrix' && view) view.focus();
+    else if (area === 'answer' && answerBox) answerBox.focus();
+    else if (area === 'choice' && choiceList) choiceList.focus();
     else textPane.focus();
   }
 
@@ -323,7 +353,7 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
 
     if (name in MOVE_COMMANDS) {
       if (!session?.matrix) return;
-      const result = session.move(MOVE_COMMANDS[name]);
+      const result = session.move(moveFor(MOVE_COMMANDS[name]));
       view.setCursor(result.row, result.col);
       announcer.afterMove(result);
       return;
@@ -377,10 +407,22 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
       case 'MENU':
         onExit();
         break;
+      case 'AREA_NEXT':
+      case 'AREA_PREV':
+        moveToArea(context, name === 'AREA_NEXT' ? 1 : -1);
+        break;
+      case 'POV_TOGGLE': {
+        const pov = togglePov();
+        renderStep(true);
+        focusArea(context); // stay in the same part (the matrix is redrawn)
+        sfx.modeChange();
+        speech.speak([spoken(`pov_${pov}`)]);
+        break;
+      }
       case 'LANGUAGE_TOGGLE':
         setLang(otherLang());
         renderStep(true);
-        focusForStep();
+        focusArea(context);
         speech.speak([spoken('language_name')]);
         break;
       case 'HELP':
@@ -398,7 +440,8 @@ export function mountLesson(root, { lesson, onExit, preview = false }) {
   function helpFor(context) {
     if (context === 'matrix') {
       if (session?.hasContents) return 'help_matrix_contents';
-      return session?.diagonalMoves ? 'help_matrix_diagonal' : 'help_matrix';
+      const key = session?.diagonalMoves ? 'spoken.help_matrix_diagonal' : 'spoken.help_matrix';
+      return viewKey(key).slice('spoken.'.length);
     }
     if (context === 'answer') return 'help_answer';
     if (context === 'choice') return 'help_choice';

@@ -2,13 +2,14 @@
  * File:        src/matrix/matrix-view.js
  * What it is:  Draws a matrix on the screen and shows where the cursor is.
  * What it does:
- *   const view = renderMatrix(parentEl, matrix, { label, showAxisNumbers, hints });
+ *   const view = renderMatrix(parentEl, matrix, { label, showAxisNumbers, hints, rowOneAtTop });
  *   view.setCursor(row, col)   moves the highlight
  *   view.focus()               puts keyboard focus on the grid
  *   view.element               the focusable grid element
- *   Layout follows decision C1 (the student's point of view):
- *     row 1 is at the BOTTOM, rows grow upward (↑ = forward),
- *     column 1 is on the LEFT, columns grow to the right.
+ *   Layout follows the view chosen with Alt+P (config/pov.js):
+ *     rowOneAtTop = true  (reader's view): row 1 at the TOP, rows grow downward
+ *     rowOneAtTop = false (screen view):   row 1 at the BOTTOM, rows grow upward
+ *     Column 1 is on the LEFT in both, columns grow to the right.
  *   Cells are empty on purpose: showing items or labels would give the answer
  *   away to low-vision students. Axis numbers can be hidden in settings.
  *   The grid has role="application" so screen readers (NVDA) pass the arrow
@@ -20,7 +21,8 @@
  * @param {HTMLElement} parent
  * @param {{rows:number, cols:number}} matrix
  * @param {{label:string, showAxisNumbers:boolean, hints:{forward:string, right:string},
- *          formatNumber?:(n:number)=>string}} opts   formatNumber writes Bangla digits in Bangla
+ *          rowOneAtTop?:boolean, formatNumber?:(n:number)=>string}} opts
+ *          formatNumber writes Bangla digits in Bangla
  */
 export function renderMatrix(parent, matrix, opts) {
   const num = opts.formatNumber ?? String;
@@ -39,8 +41,10 @@ export function renderMatrix(parent, matrix, opts) {
 
   const cells = new Map(); // "r,c" -> element
 
-  // Top row of the screen = highest row number.
-  for (let r = matrix.rows; r >= 1; r--) {
+  // Rows in screen order, top to bottom.
+  const rowOrder = Array.from({ length: matrix.rows }, (_, i) => i + 1);
+  if (!opts.rowOneAtTop) rowOrder.reverse();
+  for (const r of rowOrder) {
     grid.append(axisLabel(num(r), 'row-label'));
     for (let c = 1; c <= matrix.cols; c++) {
       const cell = document.createElement('div');

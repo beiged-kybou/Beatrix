@@ -35,7 +35,7 @@ Then open http://localhost:8080 in **Chrome or Edge**. No `npm install` is neede
 | 9 | What is in this cell? | hears what cells hold (Space), finds and counts things |
 | 10 | Diagonal steps | learns the four diagonal moves |
 | 11 | The main diagonal | walks and counts the cells where row = column |
-| 12 | The other diagonal | walks from the near-right to the far-left corner (row + column is constant) |
+| 12 | The other diagonal | walks from the top-right to the bottom-left corner in the reader's view (near-right to far-left in the screen view); row + column is constant |
 | 13 | Shortest way with diagonals | compares with Lesson 7: the answer is the bigger of the row and column change |
 | 14 | The identity matrix | 1s on the main diagonal, 0s elsewhere; Space reads the numbers |
 | 15 | Numbers in cells | reads numbers with Space; finds, compares, finds the biggest/smallest |
@@ -55,12 +55,14 @@ Teachers can make their own lessons of every one of these kinds in tutor mode.
 | ↑ ↓ | Lesson list: choose a lesson |
 | Page Down / Page Up | Lesson list: jump to the next / previous section |
 | Enter | Open a lesson / give an answer / go from the text to the task |
-| Tab | Move between the text, the matrix and the answer box |
-| → ← | Text: read the next / previous unit |
+| Ctrl+↓ / Ctrl+↑ | Move to the next / previous part: text → matrix → answer (wraps round). **Tab / Shift+Tab do the same inside a lesson**, so focus never leaves the page. Every step starts on the text |
+| Space | Text: **play everything**, sentence by sentence (recordings first); Space again pauses / resumes |
+| → ← | Text: read the next / previous unit (sentence by default) |
 | Alt+L / Alt+W / Alt+S | Read by **letter / word / sentence** |
 | Alt+T, then A | **Audio word mode**: walk through the *recording* word by word (Enter plays from the current word, Ctrl+→/← jumps by sentence) |
-| ↑ ↓ ← → | Matrix: forward / back / left / right. **Forward = row number grows** |
-| E / Q / C / Z | Matrix, diagonal lessons only: forward-right / forward-left / back-right / back-left. Also numpad 9 / 7 / 3 / 1 and Page Up / Home / Page Down / End |
+| Alt+P | Switch the matrix view: **reader's view** (default) ↔ **screen view** (see below) |
+| ↑ ↓ ← → | Matrix: move. Reader's view: **↓ = row number grows**. Screen view: **↑ = row number grows** |
+| E / Q / C / Z | Matrix, diagonal lessons only: up-right / up-left / down-right / down-left on the screen. Also numpad 9 / 7 / 3 / 1 and Page Up / Home / Page Down / End |
 | Space | Matrix: "what is here?" when cells hold things (Lesson 9); otherwise "where am I?" (only where every cell speaks) |
 | ↑ ↓ then Enter, or 1–4 | Answer options: hear them, then choose (Lesson 8) |
 | R | Hear the question (questions are never read automatically) |
@@ -72,7 +74,15 @@ Teachers can make their own lessons of every one of these kinds in tutor mode.
 
 Why Alt and not Ctrl: Chrome never lets a web page block **Ctrl+W** (closes the tab) or **Ctrl+T** (new tab). All shortcuts live in [src/config/keybindings.js](src/config/keybindings.js); change them there.
 
-**The matrix from the student's point of view:** the child stands at row 1 (nearest), column 1 (left). Forward (↑) goes to row 2, 3, … and right (→) to column 2, 3, … The screen shows it the same way: row 1 is at the bottom.
+**Two views of the matrix (Alt+P, remembered on the device):**
+
+| | Reader's view (default) | Screen view |
+|---|---|---|
+| Row 1 | at the **top**, like a page in a book | at the **bottom**, nearest to you |
+| Next row | ↓ (down) | ↑ (forward) |
+| Words | down / up, top-left … bottom-right | forward / back, near-left … far-right |
+
+Column 1 is on the left in both, and → goes to column 2, 3, … The lessons, questions, help and hints follow the view. Lesson paragraphs that talk about directions have a reader's version (`textReader` / `promptReader` in the lesson files); the screen-view text is kept exactly as recorded.
 
 **Sounds:** a **dot** on silent cells (it moves left→right with the column and gets higher with the row), a **thud** at the edge, a **rising tune** for a right answer, **"oh-oh"** for a wrong one (try again or Alt+N to skip).
 
@@ -82,6 +92,7 @@ In student mode, type **`zxcvbnm1234`** (anywhere, no box needed). Tutor mode op
 
 - **New lesson**: title, intro paragraphs, an optional practice matrix, and exercises of the same four kinds as Lessons 1–4. Up to 15 × 15. One language is required, the other is optional.
 - **Record / Upload voice** for the title, each paragraph and each question, in each language.
+- **Reader's view text (optional)** for a paragraph or question that talks about directions: write it with down / up and top / bottom (row 1 at the top). Leave it empty and the same text is used in both views. It has its own recorder.
 - **Duplicate to edit** makes an editable copy of a built-in lesson (the built-ins stay unchanged).
 - **Preview** runs the lesson exactly as a student sees it.
 - **Export / Import**: lessons are saved **in this browser on this device**. To use one on another computer, Export it (a `.6dots.json` file with its recordings inside), send it by USB, WhatsApp or email, and Import it there.
@@ -105,14 +116,19 @@ npm run audio-scripts
 ```
 Regenerates the recording scripts after changing text.
 
+```bash
+npm run audio:generate:win -- --all
+```
+Makes the Bangla sentence clips with Gemini (needs a `gemini-key` file in this folder and the Python `.venv`; on Mac/Linux use `npm run audio:generate`). Add `--reader` to make the reader's view clips.
+
 | Folder | One job per file |
 |---|---|
 | `src/core` | event bus, app state |
-| `src/config` | settings, keybindings |
+| `src/config` | settings, keybindings, matrix view (`pov.js`: reader's / screen view) |
 | `src/input` | keyboard → named commands |
 | `src/i18n` | English/Bangla strings, numbers, speech clean-up |
 | `src/audio` | TTS, recorded clips, phrase joining, sound effects |
-| `src/text-navigation` | letter/word/sentence splitting and the reading cursor |
+| `src/text-navigation` | letter/word/sentence splitting, the reading cursor, sentence-by-sentence play (Space) |
 | `src/transcript` | audio word mode (alignment files) |
 | `src/matrix` | matrix shape, cursor, drawing, what each cell says |
 | `src/lessons` | the lesson template (`lesson-schema.js`), validator, checkers, lesson flow |

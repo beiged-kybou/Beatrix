@@ -22,10 +22,13 @@
  *   answer  the number answer box (only Enter/Escape/Alt keys, so typing works)
  *   choice  the list of answer options (choice exercises)
  *
- * Why Alt and not Ctrl: Chrome never lets a web page block Ctrl+W (closes the
+ * Why Alt and not Ctrl (for Alt+letter shortcuts): Chrome never lets a web page block Ctrl+W (closes the
  * tab) or Ctrl+T (new tab). See internal_logs/implementation_iteration1.md, B1.
  * Depends on:  nothing.
  */
+
+/** The focusable parts of a lesson screen (Tab stays normal everywhere else). */
+const LESSON_AREAS = ['text', 'matrix', 'answer', 'choice'];
 
 export const KEYBINDINGS = [
   // --- Text unit modes (B1-a) ---
@@ -41,20 +44,22 @@ export const KEYBINDINGS = [
   { command: 'NEXT_SENTENCE', keys: ['Ctrl+ArrowRight'], contexts: ['text'] },
   { command: 'PREV_SENTENCE', keys: ['Ctrl+ArrowLeft'],  contexts: ['text'] },
 
-  // --- Matrix (C1: forward = row number grows) ---
-  { command: 'MOVE_FORWARD', keys: ['ArrowUp'],    contexts: ['matrix'] },
-  { command: 'MOVE_BACK',    keys: ['ArrowDown'],  contexts: ['matrix'] },
-  { command: 'MOVE_LEFT',    keys: ['ArrowLeft'],  contexts: ['matrix'] },
-  { command: 'MOVE_RIGHT',   keys: ['ArrowRight'], contexts: ['matrix'] },
+  // --- Matrix ---
+  // Commands name the key's direction ON THE SCREEN. config/pov.js turns it into
+  // a matrix move for the current view (reader: ↓ = row + 1; screen: ↑ = row + 1).
+  { command: 'MOVE_UP',    keys: ['ArrowUp'],    contexts: ['matrix'] },
+  { command: 'MOVE_DOWN',  keys: ['ArrowDown'],  contexts: ['matrix'] },
+  { command: 'MOVE_LEFT',  keys: ['ArrowLeft'],  contexts: ['matrix'] },
+  { command: 'MOVE_RIGHT', keys: ['ArrowRight'], contexts: ['matrix'] },
 
   // Diagonal steps (iteration 3, decision B1-c): the numpad keys sit in the shape
-  // of the move (9 = forward-right). With Num Lock off they are PageUp/Home/
-  // PageDown/End, and E/Q/C/Z work on laptops without a numpad.
+  // of the move on the screen (9 = up-right). With Num Lock off they are PageUp/
+  // Home/PageDown/End, and E/Q/C/Z work on laptops without a numpad.
   // They only move where the exercise allows diagonals (diagonalMoves: true).
-  { command: 'MOVE_FORWARD_RIGHT', keys: ['Numpad9', 'PageUp', 'KeyE'],   contexts: ['matrix'] },
-  { command: 'MOVE_FORWARD_LEFT',  keys: ['Numpad7', 'Home', 'KeyQ'],     contexts: ['matrix'] },
-  { command: 'MOVE_BACK_RIGHT',    keys: ['Numpad3', 'PageDown', 'KeyC'], contexts: ['matrix'] },
-  { command: 'MOVE_BACK_LEFT',     keys: ['Numpad1', 'End', 'KeyZ'],      contexts: ['matrix'] },
+  { command: 'MOVE_UP_RIGHT',   keys: ['Numpad9', 'PageUp', 'KeyE'],   contexts: ['matrix'] },
+  { command: 'MOVE_UP_LEFT',    keys: ['Numpad7', 'Home', 'KeyQ'],     contexts: ['matrix'] },
+  { command: 'MOVE_DOWN_RIGHT', keys: ['Numpad3', 'PageDown', 'KeyC'], contexts: ['matrix'] },
+  { command: 'MOVE_DOWN_LEFT',  keys: ['Numpad1', 'End', 'KeyZ'],      contexts: ['matrix'] },
   // Space: "where am I", or "what is here" when the cells hold things
   { command: 'WHERE_AM_I',   keys: ['Space'],      contexts: ['matrix'] },
 
@@ -72,12 +77,19 @@ export const KEYBINDINGS = [
   { command: 'SECTION_NEXT', keys: ['PageDown'], contexts: ['list'] },
   { command: 'SECTION_PREV', keys: ['PageUp'],   contexts: ['list'] },
 
+  // --- Moving between the parts of a lesson (iteration 6, decision B3-a) ---
+  // question -> matrix -> answer, wrapping around. Tab does the same inside a
+  // lesson, so focus never leaves the page.
+  { command: 'AREA_NEXT', keys: ['Ctrl+ArrowDown', 'Tab'],     contexts: LESSON_AREAS },
+  { command: 'AREA_PREV', keys: ['Ctrl+ArrowUp', 'Shift+Tab'], contexts: LESSON_AREAS },
+
   // --- Shared ---
   { command: 'SELECT',          keys: ['Enter'],    contexts: ['text', 'matrix', 'answer', 'list', 'choice'] },
   { command: 'REPEAT_QUESTION', keys: ['KeyR'],     contexts: ['text', 'matrix', 'answer', 'choice'] },
   { command: 'SKIP',            keys: ['Alt+KeyN'], contexts: ['global'] },
   { command: 'MENU',            keys: ['Alt+KeyM'], contexts: ['global'] },
   { command: 'LANGUAGE_TOGGLE', keys: ['Alt+KeyB'], contexts: ['global'] },
+  { command: 'POV_TOGGLE',      keys: ['Alt+KeyP'], contexts: ['global'] },
   { command: 'HELP',            keys: ['Alt+KeyH'], contexts: ['global'] },
   { command: 'STOP',            keys: ['Escape'],   contexts: ['global'] },
 ];

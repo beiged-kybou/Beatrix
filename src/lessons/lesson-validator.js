@@ -29,6 +29,18 @@ function inside(cell, rows, cols) {
   return cell && isInt(cell.row) && isInt(cell.col) && cell.row >= 1 && cell.row <= rows && cell.col >= 1 && cell.col <= cols;
 }
 
+/**
+ * Reader's view text is optional, but when it is there it must have every
+ * language the normal text has, or one language would show the wrong view.
+ * @returns {string|null} 'English' / 'Bangla' when that one is missing
+ */
+function readerGap(text, reader) {
+  if (!hasText(reader)) return null;
+  if (text?.en?.trim() && !reader.en?.trim()) return 'English';
+  if (text?.bn?.trim() && !reader.bn?.trim()) return 'Bangla';
+  return null;
+}
+
 /** @returns {string[]} */
 export function validateLesson(lesson) {
   const errors = [];
@@ -43,6 +55,8 @@ export function validateLesson(lesson) {
     paragraphs.forEach((p, i) => {
       if (!p?.id) errors.push(`Introduction paragraph ${i + 1} has no id.`);
       if (!hasText(p?.text)) errors.push(`Introduction paragraph ${i + 1} is empty. Write it or remove it.`);
+      const missing = readerGap(p?.text, p?.textReader);
+      if (missing) errors.push(`Introduction paragraph ${i + 1}: the reader's view text has no ${missing} version.`);
     });
   }
   const explore = lesson.intro?.explore;
@@ -67,6 +81,8 @@ export function validateLesson(lesson) {
       return;
     }
     for (const msg of exerciseErrors(ex)) errors.push(`${where}: ${msg}.`);
+    const missing = readerGap(ex.prompt, ex.promptReader);
+    if (missing) errors.push(`${where}: the reader's view question has no ${missing} version.`);
   });
   return errors;
 }

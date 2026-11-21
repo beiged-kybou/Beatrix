@@ -20,7 +20,10 @@
         "text": {
           "en": "With diagonal steps it is shorter: 2 steps forward-right take you to (3, 3), then 1 step forward to (4, 3). Only 3 steps.",
           "bn": "কোনাকুনি পা নিলে পথ ছোট হয়: সামনে-ডানে ২ পা গেলে (৩, ৩), তারপর সামনে ১ পা গেলে (৪, ৩)। মাত্র ৩ পা।"
-        }
+        },
+        "textReader": {
+        "en": "With diagonal steps it is shorter: 2 steps down-right take you to (3, 3), then 1 step down to (4, 3). Only 3 steps.",
+        "bn": "কোনাকুনি পা নিলে পথ ছোট হয়: নিচে-ডানে ২ পা গেলে (৩, ৩), তারপর নিচে ১ পা গেলে (৪, ৩)। মাত্র ৩ পা।" }
       },
       {
         "id": "p03",

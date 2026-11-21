@@ -2,7 +2,8 @@
  * File:        src/tutor/exercise-editors/common-fields.js
  * What it is:  Form parts shared by several exercise editors.
  * What it does:
- *   promptFields(lesson, exercise, { required, hint })  question text + voice recorders
+ *   promptFields(lesson, exercise, { required, hint })  question text + voice recorders,
+ *                                                       and the optional reader's view question
  *   sizeFields(exercise, onChange)                      rows × columns (1..15)
  *   speakingCellsField(exercise, onChange)              which cells speak (decision C10)
  *   exploreFields(exercise)                             optional practice matrix, with its
@@ -16,7 +17,7 @@
 
 import { el, button, bilingualField, numberField, selectField, checkboxField } from '../field-builders.js';
 import { recorderPair } from '../audio-recorder.js';
-import { LIMITS, SPEAKING_CHOICES, clipKeyForPrompt } from '../../lessons/lesson-schema.js';
+import { LIMITS, SPEAKING_CHOICES, clipKeyForPrompt, readerClipKeyForPrompt } from '../../lessons/lesson-schema.js';
 
 export function promptFields(lesson, exercise, { required = false, hint = '' } = {}) {
   const wrap = el('div', 'prompt-fields');
@@ -30,7 +31,17 @@ export function promptFields(lesson, exercise, { required = false, hint = '' } =
     }),
   );
   if (hint) wrap.append(el('p', 'help', hint));
-  wrap.append(recorderPair(clipKeyForPrompt(lesson, exercise), 'Question'));
+  wrap.append(recorderPair(clipKeyForPrompt(lesson, exercise, 'screen'), 'Question'));
+  wrap.append(
+    bilingualField({
+      label: "Reader's view question (optional)",
+      value: exercise.promptReader ?? { en: '', bn: '' },
+      multiline: true,
+      onChange: (v) => (exercise.promptReader = v),
+    }),
+    el('p', 'help', "Only if the question talks about directions (row 1 at the top: down / up, top / bottom). Empty = the same question in both views."),
+    recorderPair(readerClipKeyForPrompt(lesson, exercise), "Question, reader's view"),
+  );
   return wrap;
 }
 

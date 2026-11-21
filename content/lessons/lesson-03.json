@@ -13,7 +13,10 @@
         "bn": "শুধু তিনটি ঘর কথা বলবে: শুরুর ঘর (১, ১), সারি ১-এর শেষ ঘর, আর কলাম ১-এর শেষ ঘর। বাকি সব ঘরে টুং শব্দ হবে।" } },
       { "id": "p03", "text": {
         "en": "Move right along row 1 until you bump the edge. The last cell tells you the number of columns. Move forward along column 1 until you bump the edge. The last cell tells you the number of rows.",
-        "bn": "সারি ১ ধরে ডানে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে কলামের সংখ্যা বলে দেবে। কলাম ১ ধরে সামনে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে সারির সংখ্যা বলে দেবে।" } },
+        "bn": "সারি ১ ধরে ডানে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে কলামের সংখ্যা বলে দেবে। কলাম ১ ধরে সামনে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে সারির সংখ্যা বলে দেবে।" },
+        "textReader": {
+        "en": "Move right along row 1 until you bump the edge. The last cell tells you the number of columns. Move down along column 1 until you bump the edge. The last cell tells you the number of rows.",
+        "bn": "সারি ১ ধরে ডানে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে কলামের সংখ্যা বলে দেবে। কলাম ১ ধরে নিচে চলো, যতক্ষণ না কিনারায় ধাক্কা খাও। শেষ ঘরটি তোমাকে সারির সংখ্যা বলে দেবে।" } },
       { "id": "p04", "text": {
         "en": "Then press Enter to go to the answer box. Type the number of rows and press Enter. Then type the number of columns and press Enter. Press Alt N to begin.",
         "bn": "তারপর এন্টার চেপে উত্তরের ঘরে যাও। সারির সংখ্যা লিখে এন্টার চাপো। তারপর কলামের সংখ্যা লিখে এন্টার চাপো। শুরু করতে অল্ট এন চাপো।" } }

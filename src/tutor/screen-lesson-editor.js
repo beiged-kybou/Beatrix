@@ -19,7 +19,7 @@
 
 import {
   EXERCISE_TYPES, EXERCISE_TYPE_LABELS, LIMITS,
-  createEmptyExercise, createEmptyParagraph, clipKeyForTitle, clipKeyForParagraph,
+  createEmptyExercise, createEmptyParagraph, clipKeyForTitle, clipKeyForParagraph, readerClipKeyForParagraph,
 } from '../lessons/lesson-schema.js';
 import { validateLesson } from '../lessons/lesson-validator.js';
 import { saveLesson } from '../storage/custom-lesson-store.js';
@@ -96,7 +96,15 @@ export function mountLessonEditor(root, { lesson, isNew, onDone, onPreview }) {
       box.append(
         el('h4', '', `Paragraph ${i + 1}`),
         bilingualField({ label: 'Text', value: p.text, multiline: true, onChange: (v) => (p.text = v) }),
-        recorderPair(clipKeyForParagraph(draft, p), 'Paragraph'),
+        recorderPair(clipKeyForParagraph(draft, p, 'screen'), 'Paragraph'),
+        bilingualField({
+          label: "Reader's view text (optional)",
+          value: p.textReader ?? { en: '', bn: '' },
+          multiline: true,
+          onChange: (v) => (p.textReader = v),
+        }),
+        el('p', 'help', "Only if this paragraph talks about directions. The reader's view has row 1 at the top: say down / up and top / bottom instead of forward / back and near / far. Empty = the same text in both views."),
+        recorderPair(readerClipKeyForParagraph(draft, p), "Paragraph, reader's view"),
         itemButtons(draft.intro.paragraphs, i),
       );
       intro.append(box);

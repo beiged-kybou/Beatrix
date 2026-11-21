@@ -13,7 +13,10 @@
         "text": {
           "en": "The main diagonal is the slanted line of cells from the near-left corner to the far-right corner: (1, 1), (2, 2), (3, 3), and so on.",
           "bn": "প্রধান কর্ণ হলো কাছের বাম কোণা থেকে দূরের ডান কোণা পর্যন্ত কোনাকুনি এক সারি ঘর: (১, ১), (২, ২), (৩, ৩), এভাবে।"
-        }
+        },
+        "textReader": {
+        "en": "The main diagonal is the slanted line of cells from the top-left corner to the bottom-right corner: (1, 1), (2, 2), (3, 3), and so on.",
+        "bn": "প্রধান কর্ণ হলো উপরের বাম কোণা থেকে নিচের ডান কোণা পর্যন্ত কোনাকুনি এক সারি ঘর: (১, ১), (২, ২), (৩, ৩), এভাবে।" }
       },
       {
         "id": "p02",
@@ -27,7 +30,10 @@
         "text": {
           "en": "To walk along it, start at (1, 1) and press forward-right again and again, until you hear the thud.",
           "bn": "এর ওপর দিয়ে হাঁটতে (১, ১) থেকে শুরু করো আর বারবার সামনে-ডানে চাপো, যতক্ষণ না ধুপ শব্দ শোনো।"
-        }
+        },
+        "textReader": {
+        "en": "To walk along it, start at (1, 1) and press down-right again and again, until you hear the thud.",
+        "bn": "এর ওপর দিয়ে হাঁটতে (১, ১) থেকে শুরু করো আর বারবার নিচে-ডানে চাপো, যতক্ষণ না ধুপ শব্দ শোনো।" }
       },
       {
         "id": "p04",
@@ -58,7 +64,8 @@
       "prompt": {
         "en": "Walk along the main diagonal of this 4 by 4 matrix with forward-right, and count its cells, the first one too. Then press Enter, type the number and press Enter.",
         "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের প্রধান কর্ণ ধরে সামনে-ডানে হাঁটো, আর প্রথমটিসহ ঘরগুলো গোনো। তারপর এন্টার চাপো, সংখ্যাটি লিখে এন্টার চাপো।"
-      }
+      },
+      "promptReader": { "en": "Walk along the main diagonal of this 4 by 4 matrix with down-right, and count its cells, the first one too. Then press Enter, type the number and press Enter.", "bn": "এই ৪ বাই ৪ ম্যাট্রিক্সের প্রধান কর্ণ ধরে নিচে-ডানে হাঁটো, আর প্রথমটিসহ ঘরগুলো গোনো। তারপর এন্টার চাপো, সংখ্যাটি লিখে এন্টার চাপো।" }
     },
     {
       "id": "ex02",

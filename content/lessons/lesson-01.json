@@ -13,10 +13,16 @@
         "bn": "প্রতিটি বাক্সকে বলা হয় ঘর।" } },
       { "id": "p03", "text": {
         "en": "A row goes from left to right. A column goes straight forward, away from you.",
-        "bn": "সারি চলে বাম থেকে ডানে। কলাম চলে তোমার কাছ থেকে সোজা সামনের দিকে।" } },
+        "bn": "সারি চলে বাম থেকে ডানে। কলাম চলে তোমার কাছ থেকে সোজা সামনের দিকে।" },
+        "textReader": {
+        "en": "A row goes from left to right. A column goes from top to bottom, like the lines down a page.",
+        "bn": "সারি চলে বাম থেকে ডানে। কলাম চলে উপর থেকে নিচে, বইয়ের পাতার মতো।" } },
       { "id": "p04", "text": {
         "en": "Row 1 is the row nearest to you. When you move forward, the row number grows: row 1, row 2, row 3. Column 1 is on your left. When you move right, the column number grows.",
-        "bn": "সারি ১ তোমার সবচেয়ে কাছের সারি। সামনে গেলে সারির নম্বর বাড়ে: সারি ১, সারি ২, সারি ৩। কলাম ১ তোমার বাম দিকে। ডানে গেলে কলামের নম্বর বাড়ে।" } },
+        "bn": "সারি ১ তোমার সবচেয়ে কাছের সারি। সামনে গেলে সারির নম্বর বাড়ে: সারি ১, সারি ২, সারি ৩। কলাম ১ তোমার বাম দিকে। ডানে গেলে কলামের নম্বর বাড়ে।" },
+        "textReader": {
+        "en": "Row 1 is the top row. When you move down, the row number grows: row 1, row 2, row 3. Column 1 is on your left. When you move right, the column number grows.",
+        "bn": "সারি ১ হলো সবচেয়ে উপরের সারি। নিচে গেলে সারির নম্বর বাড়ে: সারি ১, সারি ২, সারি ৩। কলাম ১ তোমার বাম দিকে। ডানে গেলে কলামের নম্বর বাড়ে।" } },
       { "id": "p05", "text": {
         "en": "We write the size of a matrix as m × n. We read it as m by n. m is the number of rows, and n is the number of columns.",
         "bn": "ম্যাট্রিক্সের আকার আমরা লিখি m × n, আর পড়ি m বাই n। এখানে m হলো সারির সংখ্যা, আর n হলো কলামের সংখ্যা।" } },

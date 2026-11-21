@@ -14,6 +14,7 @@
  */
 
 import { loadStrings, t } from './i18n/language.js';
+import { loadPov } from './config/pov.js';
 import { loadManifest, builtInClipUrl } from './audio/audio-manifest.js';
 import { registerClipSource } from './audio/speech-service.js';
 import { clipSource as tutorClipSource } from './storage/audio-clip-store.js';
@@ -69,6 +70,7 @@ function updateHeader() {
 }
 
 async function start() {
+  loadPov(); // matrix view: reader's (default) or screen, remembered on this device
   await Promise.all([loadStrings(), loadManifest()]);
 
   registerClipSource(tutorClipSource);

@@ -13,7 +13,10 @@
         "bn": "(২, ১) থেকে (৪, ৪): সারি ২ থেকে ৪ হয়, অর্থাৎ ২ পা। কলাম ১ থেকে ৪ হয়, অর্থাৎ ৩ পা। ২ যোগ ৩ সমান ৫ পা।" } },
       { "id": "p03", "text": {
         "en": "You can only move forward, back, left and right, never on a slant.",
-        "bn": "তুমি শুধু সামনে, পেছনে, বামে আর ডানে যেতে পারো, কোনাকুনি নয়।" } },
+        "bn": "তুমি শুধু সামনে, পেছনে, বামে আর ডানে যেতে পারো, কোনাকুনি নয়।" },
+        "textReader": {
+        "en": "You can only move up, down, left and right, never on a slant.",
+        "bn": "তুমি শুধু উপরে, নিচে, বামে আর ডানে যেতে পারো, কোনাকুনি নয়।" } },
       { "id": "p04", "text": {
         "en": "You can check in the matrix: only the two cells in the question speak, and Space tells you what is in a cell. Then type the number and press Enter. Press Alt N to begin.",
         "bn": "চাইলে ম্যাট্রিক্সে মিলিয়ে দেখতে পারো: শুধু প্রশ্নের দুটি ঘর কথা বলবে, আর স্পেস চাপলে ঘরে কী আছে বলবে। তারপর সংখ্যাটি লিখে এন্টার চাপো। শুরু করতে অল্ট এন চাপো।" } }

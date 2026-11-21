@@ -27,7 +27,10 @@
         "text": {
           "en": "A column total works the same way: walk forward along the column. Press Alt N to begin.",
           "bn": "কলামের যোগফলও একইভাবে: কলাম ধরে সামনে হাঁটো। শুরু করতে অল্ট এন চাপো।"
-        }
+        },
+        "textReader": {
+        "en": "A column total works the same way: walk down along the column. Press Alt N to begin.",
+        "bn": "কলামের যোগফলও একইভাবে: কলাম ধরে নিচে হাঁটো। শুরু করতে অল্ট এন চাপো।" }
       }
     ],
     "explore": null

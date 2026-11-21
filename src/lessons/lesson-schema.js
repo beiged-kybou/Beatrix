@@ -16,14 +16,20 @@
  *   version:   1
  *   title:     { en, bn }                       one language is enough
  *   intro: {
- *     paragraphs: [ { id:'p01', text:{ en, bn } } ],
+ *     paragraphs: [ { id:'p01', text:{ en, bn }, textReader?:{ en, bn } } ],
  *     explore:    null | { rows, cols, diagonalMoves? }   a practice matrix where every cell speaks
  *   },
  *   exercises: [ EXERCISE ],
  *   createdAt, updatedAt                          ISO date strings (custom lessons)
  * }
  *
- * EXERCISE SHAPES (all have id, type, prompt?: { en, bn })
+ * READER'S VIEW TEXT (iteration 6): a paragraph or prompt that talks about
+ *   directions can have a second version for the reader's view (row 1 at the
+ *   top): textReader / promptReader. Without it, both views use the same text.
+ *   The screen-view text must stay unchanged, because the Bangla recordings
+ *   are matched to it sentence by sentence. See povText() below.
+ *
+ * EXERCISE SHAPES (all have id, type, prompt?: { en, bn }, promptReader?: { en, bn })
  *   number-answer      { answer, explore: null | {rows,cols}, speakingCells?, contents? }   prompt required
  *   choice             { options:[{en,bn}] (2–4), answer: option index from 0,
  *                        explore: null | {rows,cols}, speakingCells?, contents? }        prompt required
@@ -45,10 +51,11 @@
  *
  * Adding a new exercise type later: add it to EXERCISE_TYPES + createEmptyExercise,
  * then add a checker (lessons/checkers/), a validator rule and an editor form.
- * Depends on:  config/settings.js
+ * Depends on:  config/settings.js, config/pov.js
  */
 
 import { SETTINGS } from '../config/settings.js';
+import { currentPov } from '../config/pov.js';
 
 export const SCHEMA_VERSION = 1;
 
@@ -179,18 +186,63 @@ export function resolveSpeakingCells(exercise) {
   return new Set(choice.map((c) => `${c.row},${c.col}`));
 }
 
+/* ---------- Reader's view text ---------- */
+
+/** True if a bilingual text has any words in it. */
+function hasText(bilingual) {
+  return !!(bilingual?.en?.trim() || bilingual?.bn?.trim());
+}
+
+/** True if this paragraph / exercise uses its reader's version in this view. */
+export function usesReaderText(obj, field, pov = currentPov()) {
+  return pov === 'reader' && hasText(obj?.[`${field}Reader`]);
+}
+
+/**
+ * The text to show for obj[field] in this view:
+ *   povText(paragraph, 'text') or povText(exercise, 'prompt')
+ */
+export function povText(obj, field, pov = currentPov()) {
+  return usesReaderText(obj, field, pov) ? obj[`${field}Reader`] : obj?.[field];
+}
+
 /* ---------- Clip keys: link recordings to text (see audio-scripts/README.md) ---------- */
+/* Reader's view versions get their own keys ("p03r", "prompt_reader"), so a
+   recording of the screen-view sentence is never played for the other text. */
 
 export function clipKeyForTitle(lesson) {
   return `${lesson.id}.title`;
 }
 
-export function clipKeyForParagraph(lesson, paragraph) {
+export function clipKeyForParagraph(lesson, paragraph, pov = currentPov()) {
+  if (usesReaderText(paragraph, 'text', pov)) return readerClipKeyForParagraph(lesson, paragraph);
   return `${lesson.id}.intro.${paragraph.id}`;
 }
 
-export function clipKeyForPrompt(lesson, exercise) {
+/** The key of a paragraph's reader's view version: 'l01.intro.p03r'. */
+export function readerClipKeyForParagraph(lesson, paragraph) {
+  return `${lesson.id}.intro.${paragraph.id}r`;
+}
+
+/**
+ * Does the question read differently in the reader's view? Yes when it has a
+ * promptReader, or when it is generated from moves that go along a column
+ * ("3 steps forward" / "3 steps down").
+ */
+export function promptDependsOnView(exercise) {
+  if (hasText(exercise?.promptReader)) return true;
+  if (hasText(exercise?.prompt) || exercise?.type !== 'relative-move') return false;
+  return (exercise.moves ?? []).some((m) => m.dir !== 'left' && m.dir !== 'right');
+}
+
+export function clipKeyForPrompt(lesson, exercise, pov = currentPov()) {
+  if (pov === 'reader' && promptDependsOnView(exercise)) return readerClipKeyForPrompt(lesson, exercise);
   return `${lesson.id}.${exercise.id}.prompt`;
+}
+
+/** The key of a question's reader's view version: 'l06.ex01.prompt_reader'. */
+export function readerClipKeyForPrompt(lesson, exercise) {
+  return `${lesson.id}.${exercise.id}.prompt_reader`;
 }
 
 /** Option n (counting from 1) of a choice exercise. */
